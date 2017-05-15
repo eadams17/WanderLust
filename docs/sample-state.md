@@ -8,6 +8,7 @@
     logIn: {errors: []},
     createAlbum: {errors: ["title can't be blank"]}
     addComment: {errors: ["body can't be blank"]}
+    uploadPhoto: {errors: ["title can't be blank"]}
   },
   photos: {
     1: {
