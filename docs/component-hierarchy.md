@@ -19,7 +19,7 @@
 * AlbumsIndex
 
 **AlbumContainer**
-* AlbumIndex
+* PhotoIndex
 
 **SearchResultsContainer**
 * PhotoIndex
@@ -34,5 +34,5 @@ Path | Component
 "/home/photos" | "PhotosContainer"
 "/home/photos/:photoId" | "PhotoContainer"
 "/home/albums" | "AlbumsContainer"
-"/home/albums/:albumId" | "AlbumContainer"
+"/home/albums/:albumId/photos" | "AlbumContainer"
 "/home/search-results" | "SearchResultsContainer"
