@@ -1,10 +1,10 @@
-#WanderLust
+# WanderLust
 
 [HerokuLink](https://dashboard.heroku.com/apps)
 
 [Trellolink](https://trello.com/)
 
-##Minimum Viable Product
+## Minimum Viable Product
 
 WanderLust is a web application inspired by Flickr built using Ruby-On-Rails and React/Redux.
 By the end of Week 9, this app will, at minimum, satisfy the following criteria with smooth,
@@ -19,9 +19,9 @@ bug-free navigation, adequate seed data and sufficient CSS styling:
 7. Tags
 8. Bonus: Interactive Landing Page with clickable map to search photos by geolocation
 
-##Design Docs
+## Design Docs
 
-* [View Wireframes]
+* [View Wireframes](https://github.com/eadams17/WanderLust/tree/master/docs/wireframes)
 * [React Components](https://github.com/eadams17/WanderLust/blob/master/docs/component-hierarchy.md)
 * [API endpoints](https://github.com/eadams17/WanderLust/blob/master/docs/api-endpoints.md)
 * [DB schema](https://github.com/eadams17/WanderLust/blob/master/docs/schema.md)
