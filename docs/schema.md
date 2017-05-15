@@ -14,7 +14,8 @@ session_token | string | not null, indexed, unique
 column name | data type | details
 ---- | ---------------- | -------
 id | integer | not null, primary key
-title | string | not null
+title | string |
+caption | string |
 img_url | string | not null, unique
 author_id | integer | not null, foreign key (references users), indexed
 album_id | integer | not null foreign key (references albums), indexed
@@ -27,6 +28,7 @@ id | integer | not null, primary key
 author_id | integer | not null, foreign key (references users), indexed
 title | string | not null
 description | string |
+thumbnail_url | string | not null
 
 ## Comments
 

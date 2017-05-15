@@ -17,7 +17,6 @@ bug-free navigation, adequate seed data and sufficient CSS styling:
 5. Albums for organizing photos
 6. Comments
 7. Tags
-8. Bonus: Interactive Landing Page with clickable map to search photos by geolocation
 
 ## Design Docs
 
@@ -33,11 +32,11 @@ bug-free navigation, adequate seed data and sufficient CSS styling:
 
 #### Objective: Functioning rails project with front-end Authentication
 
-### Phase 2: Photos Model, API, and components (2 days)
+### Phase 2: Photos Model, API, and components (1.5 days)
 
 #### Objective: Photos can be uploaded, viewed, edited and deleted through the API.
 
-### Phase 3: Albums (2 days)
+### Phase 3: Albums (1.5 days)
 
 #### Objective: Photos belong to Albums that can be created, viewed, edited and destroyed through the API.
 
@@ -45,7 +44,7 @@ bug-free navigation, adequate seed data and sufficient CSS styling:
 
 #### Objective: Comments belong to Photo that can be created, viewed, edited and destroyed through the API.
 
-### Phase 5: Tags (1 day)
+### Phase 5: Tags & Search (2 days)
 
 #### Objective: Photos can be tagged with multiple tags, and tags are searchable.
 

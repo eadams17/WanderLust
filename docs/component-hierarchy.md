@@ -21,9 +21,6 @@
 **AlbumContainer**
 * PhotoIndex
 
-**SearchResultsContainer**
-* PhotoIndex
-
 ##Routes
 
 Path | Component
@@ -31,8 +28,8 @@ Path | Component
 "/register" | "AuthFormContainer"
 "/sign-in" | "AuthFormContainer"
 "/home" | "HomeContainer"
-"/home/photos" | "PhotosContainer"
-"/home/photos/:photoId" | "PhotoContainer"
-"/home/albums" | "AlbumsContainer"
-"/home/albums/:albumId/photos" | "AlbumContainer"
-"/home/search-results" | "SearchResultsContainer"
+"/photos" | "PhotosContainer"
+"/photos/:photoId" | "PhotoContainer"
+"/albums" | "AlbumsContainer"
+"/albums/:albumId/photos" | "AlbumContainer"
+"/search-results" | "PhotosContainer"
