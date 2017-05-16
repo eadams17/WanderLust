@@ -10,12 +10,12 @@ class Api::SessionsController < ApplicationController
       login(@user)
       render "api/users/show"
     else
-      render json: @user.errors.full_messages, status: 422
+      render(json: ["Invalid email/password combination"], status: 401)
     end
   end
 
   def destroy
     logout
-    render json: ["Sign in."], status: 404
+    render(json: ["Nobody signed in."], status: 404)
   end
 end
