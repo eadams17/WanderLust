@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { login, logout, signup } from './util/session_api_util';
+import configureStore from './store/store';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const root = document.getElementById('root');
-    ReactDOM.render(<h1>WanderLust</h1>, root);
+  const root = document.getElementById('root');
+  ReactDOM.render(<h1>WanderLust</h1>, root);
 });
