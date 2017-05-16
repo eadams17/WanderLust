@@ -1,12 +1,18 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
+import { AuthRoute } from '../util/route_util';
 import App from './app';
+import SessionFormContainer from './session_form/session_form_container';
 
 const Root = ({ store }) => (
   <Provider store={ store }>
     <HashRouter>
-      <App/>
+      <div>
+        <Route path="/" component={ App }/>
+          <AuthRoute path="/login" component={ SessionFormContainer }/>
+          <AuthRoute path="/register" component={ SessionFormContainer }/>
+      </div>
     </HashRouter>
   </Provider>
 );

@@ -1,15 +1,11 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import SessionFormContainer from './session_form/session_form_container';
+import NavbarContainer from './navbar/navbar_container';
 
-const App = () => (
+const App = ({children}) => (
   <div>
-    <header>
-      <h1>WanderLust</h1>
-    </header>
-
-    <Route path="/login" component={ SessionFormContainer }/>
-    <Route path="/register" component={ SessionFormContainer }/>
+    <NavbarContainer/>
+    {children}
   </div>
 );
 

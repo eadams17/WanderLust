@@ -16,6 +16,6 @@ class Api::SessionsController < ApplicationController
 
   def destroy
     logout
-    render(json: ["Nobody signed in."], status: 404)
+    render json: {}
   end
 end
