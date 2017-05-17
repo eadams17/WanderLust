@@ -5,6 +5,13 @@
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+    <script type="text/javascript">
+      window.cloudinary_options = {
+        cloud_name: '<%= ENV['CLOUD_NAME'] %>',
+        upload_preset: '<%= ENV['UPLOAD_PRESET'] %>'
+      };
+    </script>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
