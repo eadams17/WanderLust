@@ -17,5 +17,6 @@ class Api::SessionsController < ApplicationController
   def destroy
     logout
     render json: {}
+    #rendering empty json object fixes problem of stuck log out button
   end
 end

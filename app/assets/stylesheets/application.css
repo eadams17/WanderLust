@@ -14,8 +14,11 @@
  *= require_self
  */
 
-.navbar {
+@import './reset.scss';
+@import './components/navbar.scss';
+@import './components/session_form.scss';
+
+.app {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
 }

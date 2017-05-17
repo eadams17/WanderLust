@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.login-register-links {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    font: 20px 'Amatic SC', bold;
+    padding: 20px;
+  }
+}
+
+.logo-text {
+  font: 30px 'Rock Salt', cursive;
+  padding: 20px;
+}

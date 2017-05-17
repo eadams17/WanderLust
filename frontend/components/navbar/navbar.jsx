@@ -6,8 +6,8 @@ const publicNav = (login) => (
     <Link to="/" className="logo-link">
       <h1 className="logo-text">WanderLust</h1>
     </Link>
-    <nav className="login-register">
-      <ul>
+    <nav>
+      <ul className="login-register-links">
         <li><Link to="/login">Sign In</Link></li>
         <li><Link to="/register">Register</Link></li>
       </ul>

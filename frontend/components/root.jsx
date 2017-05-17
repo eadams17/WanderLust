@@ -9,9 +9,7 @@ const Root = ({ store }) => (
   <Provider store={ store }>
     <HashRouter>
       <div>
-        <Route path="/" component={ App }/>
-          <AuthRoute path="/login" component={ SessionFormContainer }/>
-          <AuthRoute path="/register" component={ SessionFormContainer }/>
+        <App/>
       </div>
     </HashRouter>
   </Provider>
