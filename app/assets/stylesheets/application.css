@@ -14,9 +14,8 @@
  *= require_self
  */
 
-@import './reset.scss';
-@import './components/navbar.scss';
-@import './components/session_form.scss';
+@import 'reset.scss';
+@import 'components/*';
 
 html {
   width: 100%;
