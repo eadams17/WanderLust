@@ -4,6 +4,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: white;
+  padding: 10px;
+}
+
+.logout {
+  font: 20px 'Amatic SC', bold;
+  color: #516425;
+  padding: 20px;
 }
 
 .login-register-links {
@@ -12,11 +20,19 @@
 
   li {
     font: 20px 'Amatic SC', bold;
-    padding: 20px;
+    color: #516425;
+    padding: 10px;
+    margin-right: 10px;
+
+    a:hover {
+      color: #3a400a;
+      text-decoration: underline;
+    }
   }
 }
 
 .logo-text {
   font: 30px 'Rock Salt', cursive;
-  padding: 20px;
+  color: #516425;
+  padding: 0px 20px 0px 20px;
 }

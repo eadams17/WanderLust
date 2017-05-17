@@ -18,7 +18,26 @@
 @import './components/navbar.scss';
 @import './components/session_form.scss';
 
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
 .app {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  background-image: url("http://www.abercrombiekent.co.uk/thailand/images/Thailand-Chaing-Mai-shutterstock_240784369.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
