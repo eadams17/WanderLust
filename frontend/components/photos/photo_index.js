@@ -14,11 +14,11 @@ class PhotoIndex extends React.Component {
     const photos = values(this.props.photos);
     return(
       <div className="photo-container">
-        {photos.map((photo) => (
-          <ul className= "photo-list">
+        <ul className="photo-list">
+          {photos.map((photo) => (
             <img className= "photo" key={photo.id} src={ photo.img_url }/>
-          </ul>
-        ))}
+          ))}
+        </ul>
       </div>
     );
   }

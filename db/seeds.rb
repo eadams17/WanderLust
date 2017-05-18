@@ -20,7 +20,7 @@ photo1 = Photo.create(title: 'Thailand 1', caption: '1',
          user_id: 1, album_id: 1)
 
 photo2 = Photo.create(title: 'Thailand 2', caption: '2',
-         img_url: 'http://s1.travix.com/as/asia-thailand-medium.jpg',
+         img_url: 'https://s1.travix.com/as/asia-thailand-medium.jpg',
          user_id: 1, album_id: 1)
 
 photo3 = Photo.create(title: 'Thailand 3', caption: '3',
@@ -28,11 +28,11 @@ photo3 = Photo.create(title: 'Thailand 3', caption: '3',
          user_id: 1, album_id: 1)
 
 photo4 = Photo.create(title: 'Brazil 1', caption: '1',
-         img_url: 'http://i2.cdn.turner.com/money/dam/assets/160408072953-rio-de-janeiro-brazil-780x439.jpg',
+         img_url: 'https://i2.cdn.turner.com/money/dam/assets/160408072953-rio-de-janeiro-brazil-780x439.jpg',
          user_id: 2, album_id: 1)
 
 photo5 = Photo.create(title: 'Brazil 2', caption: '2',
-         img_url: 'http://i2.cdn.cnn.com/cnnnext/dam/assets/140401160623-brazil---fernando-de-noronha-horizontal-large-gallery.jpg',
+         img_url: 'https://i2.cdn.cnn.com/cnnnext/dam/assets/140401160623-brazil---fernando-de-noronha-horizontal-large-gallery.jpg',
          user_id: 2, album_id: 1)
 
 photo6 = Photo.create(title: 'Brazil 3', caption: '3',
@@ -40,11 +40,11 @@ photo6 = Photo.create(title: 'Brazil 3', caption: '3',
          user_id: 2, album_id: 1)
 
 photo7 = Photo.create(title: 'Italy 1', caption: '1',
-         img_url: 'http://www.australiansabroad.com.au/wp-content/uploads/2011/10/italian-riviera1-slide1.jpg',
+         img_url: 'https://www.australiansabroad.com.au/wp-content/uploads/2011/10/italian-riviera1-slide1.jpg',
          user_id: 3, album_id: 1)
 
 photo8 = Photo.create(title: 'Italy 2', caption: '2',
-         img_url: 'http://kids.nationalgeographic.com/content/dam/kids/photos/Countries/H-P/italy-florence-duomo.adapt.945.1.jpg',
+         img_url: 'https://kids.nationalgeographic.com/content/dam/kids/photos/Countries/H-P/italy-florence-duomo.adapt.945.1.jpg',
          user_id: 3, album_id: 1)
 
 photo9 = Photo.create(title: 'Italy 3', caption: '3',
