@@ -72,7 +72,7 @@ class SessionForm extends React.Component {
     } else {
 
       var loginform = (
-        <div className="login-form">
+        <div className="register-form">
           <br/>
 
           <input type="text"
