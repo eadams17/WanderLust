@@ -1,8 +1,8 @@
 # WanderLust
 
-[HerokuLink](https://dashboard.heroku.com/apps)
+[HerokuLink](http://explorewanderlust.herokuapp.com/)
 
-[Trellolink](https://trello.com/)
+[Trellolink](https://trello.com/b/qL5rBwPy/wanderlust)
 
 ## Minimum Viable Product
 

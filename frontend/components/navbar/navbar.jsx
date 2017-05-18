@@ -5,25 +5,36 @@ const guestUser = { email: 'drtobogan@gmail.com', password: 'password' };
 
 const publicNav = (login) => (
   <div className="navbar">
-    <Link to="/" className="logo-link">
-      <h1 className="logo-text">WanderLust</h1>
-    </Link>
-    <nav>
-      <ul className="login-register-links">
-        <li><button onClick={() => login(guestUser)}>Guest</button></li>
-        <li><Link to="/login">Sign In</Link></li>
-        <li><Link to="/register">Register</Link></li>
-      </ul>
-    </nav>
+    <div className="nav-left">
+      <Link to="/" className="logo-link">
+        <h1 className="logo-text">WanderLust</h1>
+      </Link>
+    </div>
+    <div className="nav-right">
+      <button className="guest-login" onClick={() => login(guestUser)}>Guest</button>
+      <Link to="/login">
+        <p className="sign-in">Sign In</p>
+      </Link>
+      <Link to="/register">
+        <p className="register">Register</p>
+      </Link>
+    </div>
   </div>
 );
 
 const privateNav = (currentUser, logout) => (
   <div className="navbar">
-    <Link to="/" className="logo-link">
-      <h1 className="logo-text">WanderLust</h1>
-    </Link>
-    <button className='logout' onClick={ logout }>Sign Out</button>
+    <div className="nav-left">
+      <Link to="/" className="logo-link">
+        <h1 className="logo-text">WanderLust</h1>
+      </Link>
+    </div>
+    <div className="nav-right">
+      <Link to="/photos">
+        <p className="explore-link">Explore</p>
+      </Link>
+      <button className='logout' onClick={ logout }>Sign Out</button>
+    </div>
   </div>
 );
 

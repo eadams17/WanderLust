@@ -6,33 +6,30 @@
   width: 100%;
   background-color: white;
   padding: 10px;
+  height: 50px;
+  position: fixed;
 }
 
-.logout {
-  font: 20px 'Amatic SC', bold;
-  color: #516425;
-  padding: 20px;
-}
 
-.login-register-links {
+.nav-right {
   display: flex;
   flex-direction: row;
 
-  li {
+  .logout, .explore-link, .guest-login, .sign-in, .register {
     font: 20px 'Amatic SC', bold;
     color: #516425;
-    padding: 10px;
-    margin-right: 10px;
-
-    a:hover {
-      color: #3a400a;
-      text-decoration: underline;
-    }
+    padding: 20px;
   }
 }
+
 
 .logo-text {
   font: 30px 'Rock Salt', cursive;
   color: #516425;
   padding: 0px 20px 0px 20px;
 }
+
+// a:hover {
+//   color: #3a400a;
+//   text-decoration: underline;
+// }
