@@ -1,9 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
 const guestUser = { email: 'drtobogan@gmail.com', password: 'password' };
 
-const publicNav = (login) => (
+const publicNav = (login, history) => (
   <div className="navbar">
     <div className="nav-left">
       <Link to="/" className="logo-link">
@@ -11,7 +12,9 @@ const publicNav = (login) => (
       </Link>
     </div>
     <div className="nav-right">
-      <button className="guest-login" onClick={() => login(guestUser)}>Guest</button>
+      <button className="guest-login" onClick={() => login(guestUser).then(
+          (res) => history.push(
+            `/profile/${res.currentUser.username}`))}>Guest</button>
       <Link to="/login">
         <p className="sign-in">Sign In</p>
       </Link>
@@ -41,8 +44,8 @@ const privateNav = (currentUser, logout) => (
   </div>
 );
 
-const Navbar = ({ currentUser, logout, login }) => (
-  currentUser ? privateNav(currentUser, logout) : publicNav(login)
+const Navbar = ({ currentUser, logout, login, history }) => (
+  currentUser ? privateNav(currentUser, logout) : publicNav(login, history)
 );
 
-export default Navbar;
+export default withRouter(Navbar);

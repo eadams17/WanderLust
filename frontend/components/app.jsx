@@ -11,7 +11,7 @@ import PhotoStreamContainer from './photos/photo_stream_container';
 const App = () => (
   <div className="app">
     <NavbarContainer/>
-    <Route path="/" component={ SplashContainer }/>
+    <Route exact path="/" component={ SplashContainer }/>
     <ProtectedRoute path="/profile/:username" component={ ProfileContainer }/>
     <ProtectedRoute path="/profile/:username/photos" component={ PhotoStreamContainer }/>
     <ProtectedRoute path="/photos" component={ PhotoIndexContainer }/>

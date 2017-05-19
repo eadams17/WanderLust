@@ -18,7 +18,9 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(
+      (res) => this.props.history.push(
+        `/profile/${res.currentUser.username}`));
   }
 
   update(field) {
@@ -42,7 +44,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    
+
     var path = this.props.match.path;
 
     if(path==='/login') {
