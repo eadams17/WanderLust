@@ -30,6 +30,9 @@ const privateNav = (currentUser, logout) => (
       </Link>
     </div>
     <div className="nav-right">
+      <Link to={`/profile/${currentUser.username}`}>
+        <p className="profile-link">Profile</p>
+      </Link>
       <Link to="/photos">
         <p className="explore-link">Explore</p>
       </Link>

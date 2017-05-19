@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Link, withRouter, Redirect } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -9,7 +9,8 @@ class SessionForm extends React.Component {
       lastname: '',
       username: '',
       email: '',
-      password: ''
+      password: '',
+      redirect: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -28,7 +29,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <div className="form-errors">  
+      <div className="form-errors">
         <ul>
           {this.props.errors.map((error, idx) => (
             <li key={`error-${idx}`}>
@@ -41,7 +42,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-
+    
     var path = this.props.match.path;
 
     if(path==='/login') {
@@ -120,7 +121,7 @@ class SessionForm extends React.Component {
     }
 
     return (
-      <div className="login-form-container">
+      <div className="auth-page">
         <form onSubmit={this.handleSubmit} className="login-form-box">
           {this.renderErrors()}
           { loginform }

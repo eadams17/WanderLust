@@ -1,29 +1,33 @@
-.form-errors {
-  margin-top: 50px;
-}
-
-.login-form-container {
+.auth-page {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding: 50px;
-  margin-top: 200px;
+  margin-top: 70px;
+}
+
+.form-errors {
+  margin-top: 50px;
 }
 
 .login-form-box {
   border: 3px solid black;
   background-color: white;
-  padding: 20px;
   border-radius: 4px;
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
 }
 
 .login-form, .register-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: space-between;
   padding: 5px;
+  padding-bottom: 20px;
 }
 
 .login-form-box, .login-input {

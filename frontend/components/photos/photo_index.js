@@ -1,5 +1,5 @@
 import React from 'react';
-import { values } from 'lodash';
+import { values, pick } from 'lodash';
 
 class PhotoIndex extends React.Component {
   constructor(props) {
