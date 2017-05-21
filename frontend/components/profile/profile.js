@@ -26,6 +26,9 @@ class Profile extends React.Component {
           <Link to={`/profile/${username}/albums`}>
             <button className="prof-button">Albums</button>
           </Link>
+          <Link to={`/profile/${username}/upload`}>
+            <button className="prof-button">Upload Photo</button>
+          </Link>
         </div>
       </div>
     );

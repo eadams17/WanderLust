@@ -13,11 +13,11 @@ export const fetchPhoto = id => (
   })
 );
 
-export const createPhoto = data => (
+export const createPhoto = photo => (
   $.ajax({
     method: 'POST',
     url: 'api/photos',
-    data
+    data: {photo}
   })
 );
 
