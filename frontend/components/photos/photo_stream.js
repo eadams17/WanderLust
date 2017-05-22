@@ -1,5 +1,6 @@
 import React from 'react';
 import { values } from 'lodash';
+import { Link } from 'react-router-dom';
 
 class PhotoStream extends React.Component {
   constructor(props) {
@@ -14,13 +15,18 @@ class PhotoStream extends React.Component {
     const userId = this.props.user.id;
     const photos = values(this.props.photos).filter(photo =>
       photo.user_id === userId);
+    console.log(this.props);
 
     return(
       <div className="photo-stream-page">
         <div className="photo-stream-container">
           <ul className="photo-stream-list">
             {photos.map((photo) => (
-              <img className= "stream-photo" key={photo.id} src={ photo.img_url }/>
+              <div key={photo.id} className="stream-photo">
+                <Link to={`/photo/${photo.id}`}>
+                  <img src={ photo.img_url }/>
+                </Link>
+              </div>
             ))}
           </ul>
         </div>

@@ -9,7 +9,7 @@ export const fetchPhotos = data => (
 export const fetchPhoto = id => (
   $.ajax({
     method: 'GET',
-    url: `api/photos/${id}`
+    url: `api/photos/${id}`,
   })
 );
 
@@ -22,7 +22,7 @@ export const createPhoto = photo => (
 );
 
 export const destroyPhoto = (id) => (
-  $.ajaz({
+  $.ajax({
     method: 'DELETE',
     url: `api/photos/${id}`
   })

@@ -8,6 +8,7 @@ import PhotoIndexContainer from './photos/photo_index_container';
 import ProfileContainer from './profile/profile_container';
 import PhotoStreamContainer from './photos/photo_stream_container';
 import PhotoUploadContainer from './photos/photo_upload_container';
+import PhotoShowContainer from './photos/photo_show_container';
 
 const App = () => (
   <div className="app">
@@ -16,7 +17,8 @@ const App = () => (
     <ProtectedRoute path={`/profile/:username`} component={ ProfileContainer }/>
     <ProtectedRoute path={`/profile/:username/photos`} component={ PhotoStreamContainer }/>
     <ProtectedRoute path={`/profile/:username/upload`} component={ PhotoUploadContainer }/>
-    <ProtectedRoute path="/photos" component={ PhotoIndexContainer }/>
+    <ProtectedRoute exact path="/photos" component={ PhotoIndexContainer }/>
+    <ProtectedRoute path="/photo/:id" component={ PhotoShowContainer }/>
     <AuthRoute path="/login" component={ SessionFormContainer }/>
     <AuthRoute path="/register" component={ SessionFormContainer }/>
   </div>

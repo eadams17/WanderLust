@@ -1,5 +1,6 @@
 import React from 'react';
 import { values, pick } from 'lodash';
+import { Link } from 'react-router-dom';
 
 class PhotoIndex extends React.Component {
   constructor(props) {
@@ -16,7 +17,11 @@ class PhotoIndex extends React.Component {
       <div className="photo-container">
         <ul className="photo-list">
           {photos.map((photo) => (
-            <img className= "photo" key={photo.id} src={ photo.img_url }/>
+            <div className= "photo" key={photo.id}>
+              <Link to={`/photo/${photo.id}`}>
+                <img src={ photo.img_url }/>
+              </Link>
+            </div>
           ))}
         </ul>
       </div>
