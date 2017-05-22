@@ -8,7 +8,7 @@ class Profile extends React.Component {
 
   componentWillMount() {
     this.props.fetchPhotos();
-    this.props.fetchUser();
+    this.props.fetchUser(this.props.user.id);
   }
 
   render() {
