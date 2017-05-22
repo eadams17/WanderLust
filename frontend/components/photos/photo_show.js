@@ -40,7 +40,7 @@ class PhotoShow extends React.Component {
           <ul>
             <li><p>{photo.title}</p></li>
             <li><img className="photo-display" src={photo.img_url}></img></li>
-            <li><p>{photo.caption}</p></li>
+            <li className="caption"><p>{photo.caption}</p></li>
           </ul>
         </div>
       </div>

@@ -1,6 +1,5 @@
 .photo-container {
-  margin-top: 100px;
-  margin-bottom: 20px;
+  margin-top: 70px;
 }
 
 .photo-list {
@@ -9,6 +8,7 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .photo {

@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 
-const guestUser = { email: 'erictayloradams@gmail.com', password: 'password' };
+const guestUser = { email: 'drtobogan@gmail.com', password: 'password' };
 
 const publicNav = (login, history) => (
   <div className="navbar">

@@ -1,8 +1,6 @@
 .photo-stream-page {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background: #038c75;
 }
 
 .photo-stream-container {
@@ -16,6 +14,10 @@
   justify-content: center;
   flex-wrap: wrap;
   padding: 10px;
+  background-image: url("http://aweinclusive.com/wp-content/uploads/2013/03/635848860383333875-1067205284_Girl-Travel.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: scroll;
 }
 
 .stream-photo {

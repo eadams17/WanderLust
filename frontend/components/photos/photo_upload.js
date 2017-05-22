@@ -64,24 +64,24 @@ class PhotoUpload extends React.Component {
 
         <input type="text"
           value={this.state.title}
-          placeholder="title"
+          placeholder="title (optional)"
           onChange={this.update('title')}
           className="photo-form-input"
           />
 
         <input type="text"
           value={this.state.caption}
-          placeholder="caption"
+          placeholder="caption (optional)"
           onChange={this.update('caption')}
           className="photo-form-input"
           />
 
         <br/>
 
-        {this.state.img_url === "" ? <button className="upload-button" onClick={this.handleUpload}>Upload Photo</button> :
+        {this.state.img_url === "" ? <button className="upload-button" onClick={this.handleUpload}>Choose Photo</button> :
         <img className='image-preview'src={this.state.img_url}/>}
         <br/>
-        <button className="submit-button">Submit Photo</button>
+        <button className="submit-button">Upload Photo</button>
       </div>
     );
 
