@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   background-color: #038c75;
+  background-size: cover;
   margin-top: 70px;
   display: flex;
   flex-direction: row;
@@ -10,9 +11,11 @@
 }
 
 .photo-display-container {
-  padding: 20px;
+  padding: 10px;
   background-color: white;
+  width: 50%;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 
@@ -49,6 +52,9 @@
 
 
 .photo-display {
-  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: auto;
 }

@@ -1,19 +1,33 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
 
-user1 = User.create(firstname: 'Mantis', lastname: 'Tobogan', username: 'mtobogan',
+user1 = User.create(firstname: 'Mantis', lastname: 'Tobogan', username: 'DrTobogan',
         email: 'drtobogan@gmail.com', password: 'password')
 
-user2 = User.create(firstname: 'Margaret', lastname: 'Thatcher', username: 'maggie',
+user2 = User.create(firstname: 'Margaret', lastname: 'Thatcher', username: 'MaggieThatch',
         email: 'maggiethatch@gmail.com', password: 'password')
 
-user3 = User.create(firstname: 'Hubert', lastname: 'Cumberdale', username: 'hcumb',
+user3 = User.create(firstname: 'Jill', lastname: 'de los Angeles', username: 'jilldela',
+        email: 'jilldela@gmail.com', password: 'password')
+
+user4 = User.create(firstname: 'Eric', lastname: 'Adams', username: 'PresidentAdams',
+        email: 'erictayloradams@gmail.com', password: 'password')
+
+user5 = User.create(firstname: 'Hubert', lastname: 'Cumberdale', username: 'CandidCamera',
         email: 'cumberdale@gmail.com', password: 'password')
+
+user6 = User.create(firstname: 'Kelli', lastname: 'Adams', username: 'DancingNomad',
+        email: 'kadams@gmail.com', password: 'password')
+
+user7 = User.create(firstname: 'Muryllo', lastname: 'de Oliveira Mattos', username: 'MrMattos',
+        email: 'mmattos@gmail.com', password: 'password')
+
+user8 = User.create(firstname: 'Lauren', lastname: 'Quinn', username: 'Quintessential',
+        email: 'lquinn@gmail.com', password: 'password')
+
+user9 = User.create(firstname: 'James', lastname: 'McClymont', username: 'BritishTequilaBananas',
+        email: 'jmclymont@gmail.com', password: 'password')
+
+Photo.destroy_all
 
 photo1 = Photo.create(title: 'Thailand 1', caption: '1',
          img_url: 'https://cdn.ek.aero/english/images/Thailand-Large_tcm233-2122022.jpg',
