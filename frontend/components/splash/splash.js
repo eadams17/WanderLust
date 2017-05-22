@@ -12,7 +12,7 @@ class Splash extends React.Component {
   render(){
     if (this.props.currentUser) {
       return(
-        <div></div>
+        <div className="splash"></div>
       );
     } else {
       return(

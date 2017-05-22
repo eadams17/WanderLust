@@ -30,15 +30,15 @@ user9 = User.create(firstname: 'James', lastname: 'McClymont', username: 'Britis
 Photo.destroy_all
 
 photo1 = Photo.create(caption: 'Overlooking the city of Guilin',
-         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495474530/Guilin_Khun_Hans_www.flickr.comphotoskhunhansphotography12435764123_uukfly.jpg',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495488226/12435764123_744a5d884b_z_eqhibi.jpg',
          user_id: 1, album_id: 1)
 
 photo2 = Photo.create(caption: 'Victoria Harbour, Hong Kong',
-         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495474531/Hong_Kong_Pasu_Au_Yeung_www.flickr.comphotosstudiokanu14434826117_vze4kt.jpg',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495488226/14434826117_4974175950_z_vqekvp.jpg',
          user_id: 1, album_id: 1)
 
 photo3 = Photo.create(caption: 'Huangshan National Park, China',
-         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495474531/Huangshan_Jose_Luis_www.flickr.comphotos25178987_N033393105538_foibzr.jpg',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495488225/3393105538_5dbe4bd55e_z_fq2mos.jpg',
          user_id: 1, album_id: 1)
 
 photo4 = Photo.create(caption: 'The Bund, Shanghai, China',
@@ -50,11 +50,11 @@ photo5 = Photo.create(caption: 'The Great Wall of China',
          user_id: 1, album_id: 1)
 
 photo6 = Photo.create(caption: 'Overlooking the City of Kunming',
-         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495474531/Kunming_Aftab_Uzzaman_www.flickr.comphotosaftab9542787077_gf61wy.jpg',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495488226/9542787077_9460b88bd3_z_xjyzd1.jpg',
          user_id: 1, album_id: 1)
 
 photo7 = Photo.create(caption: 'Friends at The Bund in Shanghai, China',
-         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495474532/Shanghai_Carlos_Donderis_www.flickr.comphotoscadsonline7962510078_atfegc.jpg',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495488226/7962510078_158e2cfdf1_z_jsbztk.jpg',
          user_id: 1, album_id: 1)
 
 photo8 = Photo.create(caption: 'Leshan Giant Buddha, China',
@@ -62,11 +62,11 @@ photo8 = Photo.create(caption: 'Leshan Giant Buddha, China',
          user_id: 1, album_id: 1)
 
 photo9 = Photo.create(caption: 'Shanghai at Sunset',
-         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495474531/Shanghai_Jose_Maria_Cuellar_www.flickr.comphotoscuellar5869196846_pz0ixy.jpg',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495488226/5869196846_9e5f39c29d_z_yqebji.jpg',
          user_id: 1, album_id: 1)
 
 photo10 = Photo.create(caption: 'Shanghai at Night',
-         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495474532/Shanghai_%E6%B3%95%E6%8B%89%E5%88%A9F50__www.flickr.comphotosfferrarif5011864531814_zcirhd.jpg',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495488225/11864531814_5f8866701b_z_h3vf8g.jpg',
          user_id: 1, album_id: 1)
 
 photo11 = Photo.create(caption: 'Hiking the Great Wall of China',

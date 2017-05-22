@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRoute, Route } from 'react-router-dom';
+import { HashRoute, Route, Switch } from 'react-router-dom';
 import { ProtectedRoute, AuthRoute } from '../util/route_util';
 import NavbarContainer from './navbar/navbar_container';
 import SplashContainer from './splash/splash_container';
@@ -13,14 +13,16 @@ import PhotoShowContainer from './photos/photo_show_container';
 const App = () => (
   <div className="app">
     <NavbarContainer/>
-    <Route exact path="/" component={ SplashContainer }/>
-    <ProtectedRoute path={`/profile/:username`} component={ ProfileContainer }/>
-    <ProtectedRoute path={`/profile/:username/photos`} component={ PhotoStreamContainer }/>
-    <ProtectedRoute path={`/profile/:username/upload`} component={ PhotoUploadContainer }/>
-    <ProtectedRoute exact path="/photos" component={ PhotoIndexContainer }/>
-    <ProtectedRoute path="/photo/:id" component={ PhotoShowContainer }/>
-    <AuthRoute path="/login" component={ SessionFormContainer }/>
-    <AuthRoute path="/register" component={ SessionFormContainer }/>
+    <Switch>
+      <ProtectedRoute path={`/profile/:username/photos`} component={ PhotoStreamContainer }/>
+      <ProtectedRoute path={`/profile/:username/upload`} component={ PhotoUploadContainer }/>
+      <ProtectedRoute path={`/profile/:username`} component={ ProfileContainer }/>
+      <Route path="/photos" component={ PhotoIndexContainer }/>
+      <Route path="/photo/:id" component={ PhotoShowContainer }/>
+      <AuthRoute path="/login" component={ SessionFormContainer }/>
+      <AuthRoute path="/register" component={ SessionFormContainer }/>
+      <Route path="/" component={ SplashContainer }/>
+    </Switch>
   </div>
 );
 
