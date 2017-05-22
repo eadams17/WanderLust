@@ -25,8 +25,15 @@
     align-content: space-around;
   }
 
-  .delete-button {
-    align-self: flex-end;
+  .photo-show-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+
+  .delete-button, .return-button {
     background-color: #516425;
     color: white;
     border: none;

@@ -5,6 +5,7 @@ class PhotoShow extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleReturn = this.handleReturn.bind(this);
   }
 
   componentDidMount() {
@@ -19,15 +20,23 @@ class PhotoShow extends React.Component {
     }
   }
 
+  handleReturn(e) {
+    e.preventDefault();
+    this.props.history.goBack();
+  }
+
   render() {
     const photo = this.props.photo;
     const user = this.props.user;
     return(
       <div className="photo-show-page">
         <div className="photo-display-container">
-          {user.id === photo.user_id && (
-            <button className="delete-button" onClick={this.handleDelete}>Delete</button>
-          )}
+          <div className="photo-show-buttons">
+            <button className="return-button" onClick={this.handleReturn}>Back To Index</button>
+            {user.id === photo.user_id && (
+              <button className="delete-button" onClick={this.handleDelete}>Delete</button>
+            )}
+          </div>
           <ul>
             <li><p>{photo.title}</p></li>
             <li><img className="photo-display" src={photo.img_url}></img></li>
