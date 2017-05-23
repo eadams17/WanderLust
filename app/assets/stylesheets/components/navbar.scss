@@ -20,6 +20,10 @@
     color: #516425;
     padding: 20px;
   }
+
+  .logout:hover, .explore-link:hover, .profile-link:hover, .guest-login:hover, .sign-in:hover, .register:hover {
+    transform: scale(1.05);
+  }
 }
 
 
@@ -29,7 +33,6 @@
   padding: 0px 20px 0px 20px;
 }
 
-// a:hover {
-//   color: #3a400a;
-//   text-decoration: underline;
-// }
+.logo-text:hover {
+  transform: scale(1.05);
+}

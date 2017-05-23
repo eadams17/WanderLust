@@ -29,6 +29,10 @@
   background-color: white;
 }
 
+.album-gallery-photo:hover {
+  transform: scale(1.05);
+}
+
 .gallery-buttons {
   display: flex;
   flex-direction: row;

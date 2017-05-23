@@ -26,6 +26,10 @@
   font: 16px 'Nixie One', cursive;
 }
 
+.album:hover {
+  transform: scale(1.05);
+}
+
 .album-index-buttons {
   display: flex;
   flex-direction: row;
