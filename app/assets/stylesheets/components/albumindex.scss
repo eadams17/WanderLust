@@ -1,0 +1,24 @@
+.album-container {
+  margin-top: 70px;
+  background-image: url("http://aweinclusive.com/wp-content/uploads/2013/03/635848860383333875-1067205284_Girl-Travel.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: scroll;
+}
+
+.album-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.album {
+  width: 25%;
+  height: 25%;
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+}

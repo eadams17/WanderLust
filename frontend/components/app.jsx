@@ -9,11 +9,17 @@ import ProfileContainer from './profile/profile_container';
 import PhotoStreamContainer from './photos/photo_stream_container';
 import PhotoUploadContainer from './photos/photo_upload_container';
 import PhotoShowContainer from './photos/photo_show_container';
+import AlbumIndexContainer from './albums/album_index_container';
+import AlbumShowContainer from './albums/album_show_container';
+import AlbumGalleryContainer from './albums/album_gallery_container';
 
 const App = () => (
   <div className="app">
     <NavbarContainer/>
     <Switch>
+      <ProtectedRoute path={`/profile/:username/albums/:id/photos`} component={ AlbumGalleryContainer }/>
+      <ProtectedRoute path={`/profile/:username/albums/:id`} component={ AlbumShowContainer }/>
+      <ProtectedRoute path={`/profile/:username/albums`} component={ AlbumIndexContainer }/>
       <ProtectedRoute path={`/profile/:username/photos`} component={ PhotoStreamContainer }/>
       <ProtectedRoute path={`/profile/:username/upload`} component={ PhotoUploadContainer }/>
       <ProtectedRoute path={`/profile/:username`} component={ ProfileContainer }/>

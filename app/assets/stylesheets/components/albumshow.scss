@@ -1,0 +1,81 @@
+.album-show-page {
+  width: 100%;
+  height: 100%;
+  background-image: url("http://aweinclusive.com/wp-content/uploads/2013/03/635848860383333875-1067205284_Girl-Travel.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow: scroll;
+  margin-top: 70px;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-show-page-overlay {
+  width: 100%;
+  height: 100%;
+
+}
+
+.album-display-container {
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  font: 20px 'Nixie One', cursive;
+  text-align: center;
+  padding: 10px;
+
+  li {
+    padding: 10px;
+    width: 50%;
+    max-height: 70vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .album-title {
+    width: 100%;
+  }
+
+  .caption {
+    width: 100%;
+  }
+
+  .album-show-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+  }
+
+  .delete-button, .return-button, .gallery-button {
+    background-color: #516425;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .delete-button:hover {
+    background-color: #3a400a
+  }
+}
+
+
+.album-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  max-height: 350px;
+}
