@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter, Redirect } from 'react-router-dom';
+import { values } from 'lodash';
 
 class PhotoUpload extends React.Component {
   constructor(props) {
@@ -8,7 +9,8 @@ class PhotoUpload extends React.Component {
       title: '',
       caption: '',
       img_url: '',
-      user_id: this.props.user.id
+      user_id: this.props.user.id,
+      album_id: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
@@ -28,7 +30,7 @@ class PhotoUpload extends React.Component {
     e.preventDefault();
     this.props.createPhoto(this.state).then(
         (res) => this.props.history.push(
-          `/profile/${this.props.user.username}/photos`));
+          `/profile/${this.props.user.username}/albums/${res.photo.album_id}/photos`));
   }
 
   update(field) {
@@ -52,6 +54,7 @@ class PhotoUpload extends React.Component {
   }
 
   render() {
+    const albums = values(this.props.user.albums);
 
     var photoUploadForm = (
       <div className="photo-upload-form">
@@ -75,6 +78,14 @@ class PhotoUpload extends React.Component {
           onChange={this.update('caption')}
           className="photo-form-input"
           />
+
+        <br/>
+
+        <select onChange={this.update('album_id')}>
+          {albums.map(album => (
+            <option key={album.id} value={album.id}>{album.title}</option>
+          ))}
+        </select>
 
         <br/>
 

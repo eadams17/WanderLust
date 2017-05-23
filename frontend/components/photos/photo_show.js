@@ -1,5 +1,5 @@
 import React from 'react';
-import { values } from 'lodash';
+import { values, result } from 'lodash';
 
 class PhotoShow extends React.Component {
   constructor(props) {
@@ -9,6 +9,10 @@ class PhotoShow extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchPhoto(this.props.match.params.id);
+  }
+
+  componentWillMount() {
     this.props.fetchPhoto(this.props.match.params.id);
   }
 
@@ -28,6 +32,10 @@ class PhotoShow extends React.Component {
   render() {
     const photo = this.props.photo;
     const user = this.props.user;
+    const photoAlbum = values(this.props.user.albums).filter(album =>
+      album.id === photo.album_id)[0];
+    const albumName = result(photoAlbum, 'title');
+
     return(
       <div className="photo-show-page">
         <div className="photo-display-container">
@@ -38,7 +46,7 @@ class PhotoShow extends React.Component {
             )}
           </div>
           <ul>
-            <li className="album-title"><p>Album Title</p></li>
+            <li className="album-title"><p>{albumName}</p></li>
             <li><img className="photo-display" src={photo.img_url}></img></li>
             <li className="caption"><p>{photo.caption}</p></li>
           </ul>
