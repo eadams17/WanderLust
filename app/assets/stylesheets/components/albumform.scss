@@ -1,0 +1,85 @@
+.album-form-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-image: url("http://aweinclusive.com/wp-content/uploads/2013/03/635848860383333875-1067205284_Girl-Travel.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: scroll;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-errors {
+  margin-top: 50px;
+}
+
+.album-form-box {
+  border: 3px solid black;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+}
+
+.album-create-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+  padding: 5px;
+  padding-bottom: 20px;
+
+  h2 {
+    padding: 20px;
+  }
+}
+
+.album-form-box, .album-form-input {
+  font: 20px 'Nixie One', cursive;
+  text-align: center;
+  padding: 10px;
+}
+
+.album-form-input {
+  border: 3px solid #516425;
+  width: 80%;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+.close-button {
+  align-self: flex-end;
+  background-color: #516425;
+  color: white;
+  border: none;
+  border-radius: 4px;
+   cursor: pointer;;
+  padding: 5px;
+}
+
+.upload-button, .submit-button {
+    width: 80%;
+    background-color: #516425;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.submit-button:hover, .close-button:hover {
+    background-color: #3a400a
+}
+
+.image-preview {
+  width: 100px;
+  height: auto;
+}

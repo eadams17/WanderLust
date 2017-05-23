@@ -16,9 +16,7 @@ class PhotoStream extends React.Component {
   }
 
   render() {
-    const userId = this.props.user.id;
-    const photos = values(this.props.photos).filter(photo =>
-      photo.user_id === userId);
+    const photos = values(this.props.user.photos);
 
     return(
       <div className="photo-stream-page">

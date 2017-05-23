@@ -32,19 +32,20 @@ class AlbumShow extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     const album = this.props.album;
     const user = this.props.user;
     return(
       <div className="album-show-page">
         <div className="album-display-container">
-          <div className="album-show-buttons">
-            <button className="return-button" onClick={this.handleReturn}>Back To Index</button>
-            <button className="gallery-button" onClick={this.handleView}>View Album</button>
-            {user.id === album.user_id && (
-              <button className="delete-button" onClick={this.handleDelete}>Delete</button>
-            )}
-          </div>
-          <ul>
+          <ul className="album-display-content">
+            <div className="album-show-buttons">
+              <button className="return-button" onClick={this.handleReturn}>Back To Index</button>
+              <button className="gallery-button" onClick={this.handleView}>View Album</button>
+              {user.id === album.user_id && (
+                <button className="delete-button" onClick={this.handleDelete}>Delete</button>
+              )}
+            </div>
             <li className="album-title"><p>{album.title}</p></li>
             <li><img className="album-display" src={album.thumbnail_url}></img></li>
             <li className="caption"><p>{album.description}</p></li>

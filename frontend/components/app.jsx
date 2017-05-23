@@ -12,6 +12,7 @@ import PhotoShowContainer from './photos/photo_show_container';
 import AlbumIndexContainer from './albums/album_index_container';
 import AlbumShowContainer from './albums/album_show_container';
 import AlbumGalleryContainer from './albums/album_gallery_container';
+import AlbumFormContainer from './albums/album_form_container';
 
 const App = () => (
   <div className="app">
@@ -21,6 +22,7 @@ const App = () => (
       <ProtectedRoute path={`/profile/:username/albums/:id`} component={ AlbumShowContainer }/>
       <ProtectedRoute path={`/profile/:username/albums`} component={ AlbumIndexContainer }/>
       <ProtectedRoute path={`/profile/:username/photos`} component={ PhotoStreamContainer }/>
+      <ProtectedRoute path={`/profile/:username/newalbum`} component={ AlbumFormContainer }/>
       <ProtectedRoute path={`/profile/:username/upload`} component={ PhotoUploadContainer }/>
       <ProtectedRoute path={`/profile/:username`} component={ ProfileContainer }/>
       <ProtectedRoute path="/photos/:id" component={ PhotoShowContainer }/>

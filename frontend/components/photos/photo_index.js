@@ -1,5 +1,5 @@
 import React from 'react';
-import { values, pick } from 'lodash';
+import { values } from 'lodash';
 import { Link } from 'react-router-dom';
 
 class PhotoIndex extends React.Component {

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Profile from './profile';
-import { fetchPhotos, createPhoto } from '../../actions/photo_actions';
+import { fetchPhotos } from '../../actions/photo_actions';
 import { fetchUser} from '../../actions/user_actions';
 
 const mapStateToProps = ( state ) => ({
