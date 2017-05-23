@@ -9,8 +9,19 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  .splash-phrase1, .splash-phrase2 {
-    font: 30px 'Nixie One', bold;
+  .splash-phrase1 {
+    font: 64px 'Nixie One', bold;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    width: 60%;
+  }
+
+  .splash-phrase2 {
+    font: 40px 'Nixie One', bold;
     color: white;
     padding: 30px;
     text-align: center;
