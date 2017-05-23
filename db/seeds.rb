@@ -137,74 +137,95 @@ photo27 = Photo.create(caption: 'Caverns near Reykjavik, Iceland',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495480400/6013907925_be49ef3a90_z_nvikum.jpg',
          user_id: 1, album_id: 3)
 
-photo28 = Photo.create(caption: 'Overlooking Rio de Janeiro, Brazil',
+photo28 = Photo.create(caption: 'Waterfall at Nordur-Tingeyjarsysla, Iceland',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495479812/26050345151_7ca8ab89c9_z_sjfugd.jpg',
+         user_id: 1, album_id: 3)
+
+photo29 = Photo.create(caption: 'Overlooking Rio de Janeiro, Brazil',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495485627/23203525324_0190015e30_z_orxqf6.jpg',
          user_id: 1, album_id: 4)
 
-photo29 = Photo.create(caption: 'Praia Olho de Boi, Brazil',
+photo30 = Photo.create(caption: 'Praia Olho de Boi, Brazil',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495485626/8672667437_49e75e24ef_z_kgwghc.jpg',
          user_id: 1, album_id: 4)
 
-photo30 = Photo.create(caption: 'Cantumbi, Rio de Janeiro, Brazil',
+photo31 = Photo.create(caption: 'Cantumbi, Rio de Janeiro, Brazil',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495485626/16177830830_b7b9f4800c_z_b4swkc.jpg',
          user_id: 1, album_id: 4)
 
-photo31 = Photo.create(caption: 'Christ the Redeemer, Rio de Janeiro, Brazil',
+photo32 = Photo.create(caption: 'Christ the Redeemer, Rio de Janeiro, Brazil',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495485626/2323426046_538a4fb54b_z_ztaqx4.jpg',
          user_id: 1, album_id: 4)
 
-photo32 = Photo.create(caption: 'Buzios Brazil',
+photo33 = Photo.create(caption: 'Buzios Brazil',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495485626/3615321990_34a0161b35_z_bmbtzr.jpg',
          user_id: 1, album_id: 4)
 
-photo33 = Photo.create(caption: 'Amazon River, Brazil',
+photo34 = Photo.create(caption: 'Amazon River, Brazil',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495485627/5777960409_28f2640ecf_z_dt1k7r.jpg',
          user_id: 1, album_id: 4)
 
-photo34 = Photo.create(caption: 'Amazon River, Brazil',
+photo35 = Photo.create(caption: 'Amazon River, Brazil',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495485626/5865015108_35b5be52b9_z_d57ozi.jpg',
          user_id: 1, album_id: 4)
 
-photo35 = Photo.create(caption: 'Overlooking Rio de Janeiro at Night, Brazil',
+photo36 = Photo.create(caption: 'Overlooking Rio de Janeiro at Night, Brazil',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495485626/8492917389_927c279317_z_do0dvb.jpg',
          user_id: 1, album_id: 4)
 
-photo36 = Photo.create(caption: 'Praia da Foca, Brazil',
+photo37 = Photo.create(caption: 'Praia da Foca, Brazil',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495485627/8671090088_b1bb566aa4_z_vrbmk5.jpg',
          user_id: 1, album_id: 4)
 
-photo37 = Photo.create(caption: 'Limburg Cathedral, Hesse, Germany',
+photo38 = Photo.create(caption: 'Limburg Cathedral, Hesse, Germany',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495486521/15356297286_776e8f168d_z_e8fdqs.jpg',
          user_id: 1, album_id: 5)
 
-photo38 = Photo.create(caption: 'Winter in Monschau, Germany',
+photo39 = Photo.create(caption: 'Winter in Monschau, Germany',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495486521/16229873918_0d27e345aa_z_re8v1v.jpg',
          user_id: 1, album_id: 5)
 
-photo39 = Photo.create(caption: 'Baden-Württemberg, Germany',
+photo40 = Photo.create(caption: 'Baden-Württemberg, Germany',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495486521/15773117217_6613541f26_z_b80ldu.jpg',
          user_id: 1, album_id: 5)
 
-photo40 = Photo.create(caption: 'Rhineland-Palatinate, Germany',
+photo41 = Photo.create(caption: 'Rhineland-Palatinate, Germany',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495486520/14585987023_6af8ab1b9d_z_rlb4bj.jpg',
          user_id: 1, album_id: 5)
 
-photo41 = Photo.create(caption: 'Autumn in Windebruch Village, Germany',
+photo42 = Photo.create(caption: 'Autumn in Windebruch Village, Germany',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495486520/5896618615_4829fe3fe0_z_fociv3.jpg',
          user_id: 1, album_id: 5)
 
-photo42 = Photo.create(caption: 'Architecture of Plochingen, Germany',
+photo43 = Photo.create(caption: 'Architecture of Plochingen, Germany',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495486520/14293428773_81c832a885_z_rsgfxp.jpg',
          user_id: 1, album_id: 5)
 
-photo43 = Photo.create(caption: 'Schwangau, Bavaria, Germany',
+photo44 = Photo.create(caption: 'Schwangau, Bavaria, Germany',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495486520/9383899030_400e9bdea9_z_zqz02j.jpg',
          user_id: 1, album_id: 5)
 
-photo44 = Photo.create(caption: 'Neuschwanstein Castle, Hohenschwangau, Germany',
+photo45 = Photo.create(caption: 'Neuschwanstein Castle, Hohenschwangau, Germany',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495486520/4510298417_2fa95bd6d0_z_e5bjzy.jpg',
          user_id: 1, album_id: 5)
 
-photo45 = Photo.create(caption: 'Architecture of Bacharach, Germany',
+photo46 = Photo.create(caption: 'Architecture of Bacharach, Germany',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495486520/14564219244_e7c3f8ef5c_z_hqxf4g.jpg',
          user_id: 1, album_id: 5)
+
+Album.destroy_all
+
+album1 = Album.create(user_id: 1, title: 'Spring Semester in China', description: 'My travels around China during spring semester of 2016',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
+album2 = Album.create(user_id: 1, title: 'Fall Semester in Indonesia', description: 'My travels around Indonesia during fall semester of 2016',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
+album3 = Album.create(user_id: 1, title: 'Summer Trip to Iceland', description: 'Exploring the beautiful countryside of Iceland',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
+album4 = Album.create(user_id: 1, title: 'Carnaval no Brazil', description: 'Photos taken throughout my trip to Brazil for Carnaval',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
+album5 = Album.create(user_id: 1, title: 'Year Abroad in Germany', description: 'Images captured throughout the year I lived in Germany',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')

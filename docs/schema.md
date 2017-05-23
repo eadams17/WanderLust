@@ -17,7 +17,7 @@ id | integer | not null, primary key
 title | string |
 caption | string |
 img_url | string | not null, unique
-author_id | integer | not null, foreign key (references users), indexed
+user_id | integer | not null, foreign key (references users), indexed
 album_id | integer | not null foreign key (references albums), indexed
 
 ## albums
@@ -25,7 +25,7 @@ album_id | integer | not null foreign key (references albums), indexed
 column name | data type | details
 ---- | ---------------- | -------
 id | integer | not null, primary key
-author_id | integer | not null, foreign key (references users), indexed
+user_id | integer | not null, foreign key (references users), indexed
 title | string | not null
 description | string |
 thumbnail_url | string | not null
@@ -35,7 +35,7 @@ thumbnail_url | string | not null
 column name | data type | details
 ---- | ---------------- | -------
 id | integer | not null, primary key
-author_id | integer | not null, foreign key (references users), indexed
+user_id | integer | not null, foreign key (references users), indexed
 photo_id | integer | not null, foreign key (references photos), indexed
 body | text | not null
 

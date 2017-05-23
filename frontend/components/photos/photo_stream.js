@@ -26,7 +26,7 @@ class PhotoStream extends React.Component {
           <ul className="photo-stream-list">
             {photos.map((photo) => (
               <div key={photo.id} className="stream-photo">
-                <Link to={`/photo/${photo.id}`}>
+                <Link to={`/photos/${photo.id}`}>
                   <img src={ photo.img_url }/>
                 </Link>
               </div>

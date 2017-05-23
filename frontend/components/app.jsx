@@ -17,8 +17,8 @@ const App = () => (
       <ProtectedRoute path={`/profile/:username/photos`} component={ PhotoStreamContainer }/>
       <ProtectedRoute path={`/profile/:username/upload`} component={ PhotoUploadContainer }/>
       <ProtectedRoute path={`/profile/:username`} component={ ProfileContainer }/>
-      <Route path="/photos" component={ PhotoIndexContainer }/>
-      <Route path="/photo/:id" component={ PhotoShowContainer }/>
+      <ProtectedRoute path="/photos/:id" component={ PhotoShowContainer }/>
+      <ProtectedRoute path="/photos" component={ PhotoIndexContainer }/>
       <AuthRoute path="/login" component={ SessionFormContainer }/>
       <AuthRoute path="/register" component={ SessionFormContainer }/>
       <Route path="/" component={ SplashContainer }/>

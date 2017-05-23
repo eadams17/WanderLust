@@ -7,6 +7,7 @@ class User < ApplicationRecord
   before_validation :ensure_session_token
 
   has_many :photos
+  has_many :albums
 
   attr_reader :password
 
