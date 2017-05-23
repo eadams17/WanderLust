@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter, Redirect } from 'react-router-dom';
+import { values } from 'lodash';
 
 class AlbumForm extends React.Component {
   constructor(props) {
@@ -71,9 +72,12 @@ class AlbumForm extends React.Component {
       </div>
     );
 
+    console.log(this.props.errors);
+
     return (
       <div className="album-form-page">
         <form onSubmit={this.handleSubmit} className="album-form-box">
+          { this.renderErrors() }
           { albumUploadForm }
         </form>
       </div>

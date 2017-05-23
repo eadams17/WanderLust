@@ -85,7 +85,7 @@ class PhotoUpload extends React.Component {
           {albums.map(album => (
             <option key={album.id} value={album.id}>{album.title}</option>
           ))}
-        </select>
+        </select> *required <br/>
 
         <br/>
 
@@ -96,9 +96,12 @@ class PhotoUpload extends React.Component {
       </div>
     );
 
+    console.log(this.props);
+
     return (
       <div className="photo-upload-page">
         <form onSubmit={this.handleSubmit} className="upload-form-box">
+          { this.renderErrors() }
           { photoUploadForm }
         </form>
       </div>

@@ -18,6 +18,7 @@ class Profile extends React.Component {
       <div className="profile-page">
         <div className="welcome-header">
           <h1>Welcome Back, {name}.</h1>
+          <h2>To get started, create a new album and start uploading some photos!</h2>
         </div>
         <div className="option-buttons">
           <Link to={`/profile/${username}/photos`}>

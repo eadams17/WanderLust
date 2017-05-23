@@ -10,12 +10,19 @@
 
 .welcome-header {
   display: flex;
+  flex-direction: column;
   color: blue;
   padding: 10px;
 
   h1 {
     font: 30px 'Nixie One', bold;
     color: white;
+    padding: 30px;
+  }
+
+  h2 {
+    font: 20px 'Nixie One', bold;
+    color: #516425;
     padding: 30px;
   }
 }

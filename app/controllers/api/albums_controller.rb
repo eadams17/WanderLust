@@ -10,7 +10,7 @@ class Api::AlbumsController < ApplicationController
   def create
     @album = Album.new(album_params)
 
-    if @album.save!
+    if @album.save
       render :show
     else
       render json: @album.errors.full_messages, status: 422
