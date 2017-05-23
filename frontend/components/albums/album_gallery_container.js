@@ -7,7 +7,8 @@ import { selectAlbum } from '../../reducers/selectors';
 const mapStateToProps = (state, { match } ) => {
   const album = selectAlbum(state.albums, match.params.id);
   return {
-    album
+    album,
+    user: state.session.currentUser
   };
 };
 

@@ -32,7 +32,6 @@ class AlbumShow extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const album = this.props.album;
     const user = this.props.user;
     return(
