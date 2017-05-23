@@ -18,7 +18,7 @@ class AlbumForm extends React.Component {
     e.preventDefault();
     this.props.makeAlbum(this.state).then(
         (res) => this.props.history.push(
-          `/profile/${this.props.user.username}/albums`));
+          `/profile/${this.props.user.username}/albums/${res.album.id}`));
   }
 
   update(field) {
@@ -71,8 +71,6 @@ class AlbumForm extends React.Component {
         <button className="submit-button">Create Album</button>
       </div>
     );
-
-    console.log(this.props.errors);
 
     return (
       <div className="album-form-page">

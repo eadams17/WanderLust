@@ -5,12 +5,13 @@ import { values } from 'lodash';
 class PhotoUpload extends React.Component {
   constructor(props) {
     super(props);
+    const albums = this.props.user.albums;
     this.state = {
       title: '',
       caption: '',
       img_url: '',
       user_id: this.props.user.id,
-      album_id: ''
+      album_id: albums.length === 0 ? "" : albums[0].id
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
@@ -54,7 +55,7 @@ class PhotoUpload extends React.Component {
   }
 
   render() {
-    const albums = values(this.props.user.albums);
+    const albums = this.props.user.albums;
 
     var photoUploadForm = (
       <div className="photo-upload-form">
@@ -96,7 +97,7 @@ class PhotoUpload extends React.Component {
       </div>
     );
 
-    console.log(this.props);
+    console.log(this.state);
 
     return (
       <div className="photo-upload-page">

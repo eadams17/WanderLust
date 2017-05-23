@@ -20,9 +20,9 @@ export const removeAlbum = album => ({
   album
 });
 
-export const getAlbums = albums => dispatch => (
-  APIUtil.fetchAlbums(albums).then(
-    (_albums => dispatch(receiveAlbums(_albums))),
+export const getAlbums = data => dispatch => (
+  APIUtil.fetchAlbums(data).then(
+    (albums => dispatch(receiveAlbums(albums))),
     errors => dispatch(receiveErrors(errors.responseJSON))
 ));
 

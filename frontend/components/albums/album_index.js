@@ -14,10 +14,6 @@ class AlbumIndex extends React.Component {
     this.props.getAlbums();
   }
 
-  componentWillMount() {
-    this.props.getAlbums();
-  }
-
   handleReturnClick(e) {
     e.preventDefault();
     this.props.history.push(`/profile/${this.props.match.params.username}`);
@@ -29,8 +25,8 @@ class AlbumIndex extends React.Component {
   }
 
   render() {
-    const user = this.props.match.params.username;
-    const albums = values(this.props.albums);
+    console.log(this.props);
+    const albums = this.props.albums;
     return(
       <div className="album-container">
         <div className="album-index-buttons">
@@ -40,7 +36,7 @@ class AlbumIndex extends React.Component {
         <ul className="album-list">
           {albums.map((album) => (
             <div className= "album" key={album.id}>
-              <Link to={`/profile/${user}/albums/${album.id}`}>
+              <Link to={`/profile/${this.props.match.params.username}/albums/${album.id}`}>
                 <h2>{album.title}</h2>
                 <img src={ album.thumbnail_url }/>
               </Link>

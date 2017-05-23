@@ -1,6 +1,12 @@
 class Api::AlbumsController < ApplicationController
   def index
-    @albums = Album.all
+    if params[:user_id]
+      @albums = User.find(params[:user_id]).albums
+    elsif params[:current_user]
+      @albums = current_user.albums
+    else
+      @albums = Album.all
+    end
   end
 
   def show

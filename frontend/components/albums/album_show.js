@@ -16,14 +16,13 @@ class AlbumShow extends React.Component {
   handleDelete(e) {
     e.preventDefault();
     if(confirm("Are you sure you want to delete your album?")) {
-      this.props.deleteAlbum(this.props.album.id);
-      this.props.history.push(`/profile/${this.props.user.username}/albums`);
+      this.props.deleteAlbum(this.props.album.id).then(() => this.props.history.push(`/profile/${this.props.user.username}/albums`));
     }
   }
 
   handleReturn(e) {
     e.preventDefault();
-    this.props.history.goBack();
+    this.props.history.push(`/profile/${this.props.user.username}/albums`);
   }
 
   handleView(e) {

@@ -10,13 +10,6 @@ class PhotoStream extends React.Component {
     this.handleAddClick = this.handleAddClick.bind(this);
   }
 
-  componentDidMount() {
-    this.props.fetchPhotos();
-  }
-
-  componentWillMount() {
-    this.props.fetchPhotos();
-  }
 
   handleReturnClick(e) {
     e.preventDefault();
@@ -30,12 +23,13 @@ class PhotoStream extends React.Component {
 
   render() {
     const photos = values(this.props.user.photos);
+    console.log(photos);
 
     return(
       <div className="photo-stream-page">
         <div className="photo-stream-container">
           <div className="gallery-buttons">
-            <button className="album-index-button" onClick={ this.handleReturnClick }>Albums Index</button>
+            <button className="album-index-button" onClick={ this.handleReturnClick }>Return To Dashboard</button>
             <button className="new-photo-button" onClick={ this.handleAddClick }>Add New Photo</button>
           </div>
           <ul className="photo-stream-list">
