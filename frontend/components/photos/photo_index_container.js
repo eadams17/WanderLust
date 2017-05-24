@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import PhotoIndex from './photo_index';
 import { fetchPhotos } from '../../actions/photo_actions';
+import { toArray } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
-  photos: state.photos
+  photos: toArray(state.photos)
 });
 
 const mapDispatchToProps = dispatch => ({

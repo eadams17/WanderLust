@@ -16,7 +16,7 @@ class PhotoIndex extends React.Component {
   }
 
   render() {
-    const photos = values(this.props.photos);
+    const photos = this.props.photos;
     return(
       <div className="photo-container">
         <ul className="photo-list">
