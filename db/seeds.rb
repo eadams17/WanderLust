@@ -229,3 +229,17 @@ thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hu
 
 album5 = Album.create(user_id: 1, title: 'Year Abroad in Germany', description: 'Images captured throughout the year I lived in Germany',
 thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
+Comment.destroy_all
+
+comment1 = Comment.create(user_id: 2, photo_id: 1, body: "Great shot!")
+comment2 = Comment.create(user_id: 3, photo_id: 1, body: "Beautiful!")
+comment3 = Comment.create(user_id: 4, photo_id: 1, body: "Where is this?")
+comment4 = Comment.create(user_id: 1, photo_id: 17, body: "<3 <3 <3")
+comment5 = Comment.create(user_id: 2, photo_id: 6, body: "Well done.")
+comment6 = Comment.create(user_id: 5, photo_id: 17, body: "I wanna go here!")
+comment7 = Comment.create(user_id: 3, photo_id: 40, body: "Amazing!")
+comment8 = Comment.create(user_id: 1, photo_id: 33, body: "What camera do you use?")
+comment9 = Comment.create(user_id: 4, photo_id: 25, body: "Phenomenal!")
+comment10 = Comment.create(user_id: 2, photo_id: 13, body: "Very nice!")
+comment11 = Comment.create(user_id: 2, photo_id: 17, body: "Great shot!")

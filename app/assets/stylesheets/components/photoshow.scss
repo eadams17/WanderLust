@@ -7,7 +7,6 @@
   background-color: rgba(255, 255, 255, 0.5);
   overflow: scroll;
   margin-top: 70px;
-  margin-top: 70px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -17,7 +16,6 @@
 .photo-show-page-overlay {
   width: 100%;
   height: 100%;
-
 }
 
 .photo-display-container {
@@ -27,6 +25,8 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  align-content: center;
+  overflow: scroll;
 
   font: 20px 'Nixie One', cursive;
   text-align: center;

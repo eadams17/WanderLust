@@ -1,5 +1,6 @@
 import React from 'react';
 import { values, result } from 'lodash';
+import CommentContainer from './comments/comment_container';
 
 class PhotoShow extends React.Component {
   constructor(props) {
@@ -35,7 +36,6 @@ class PhotoShow extends React.Component {
     const photoAlbum = values(this.props.user.albums).filter(album =>
       album.id === photo.album_id)[0];
     const albumName = result(photoAlbum, 'title');
-
     return(
       <div className="photo-show-page">
         <div className="photo-display-container">
@@ -50,6 +50,9 @@ class PhotoShow extends React.Component {
             <li><img className="photo-display" src={photo.img_url}></img></li>
             <li className="caption"><p>{photo.caption}</p></li>
           </ul>
+          <div className='comment-box'>
+            <CommentContainer photoId={parseInt(this.props.match.params.id)}/>
+          </div>
         </div>
       </div>
     );
