@@ -41,10 +41,10 @@ class CommentForm extends React.Component {
     ));
 
     return(
-      <div>
-        <div className= "comment-list">
+      <div className="comment-container">
+        <ul className= "comment-list">
           { photoComments }
-        </div>
+        </ul>
         <form className="comment-form" onSubmit={ this.handleSubmit }>
           <textarea
             type='text'

@@ -27,6 +27,24 @@ user8 = User.create(firstname: 'Lauren', lastname: 'Quinn', username: 'Quintesse
 user9 = User.create(firstname: 'James', lastname: 'McClymont', username: 'BritishTequilaBananas',
         email: 'jmclymont@gmail.com', password: 'password')
 
+Album.destroy_all
+
+album1 = Album.create(user_id: 1, title: 'Spring Semester in China', description: 'My travels around China during spring semester of 2016',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
+album2 = Album.create(user_id: 1, title: 'Fall Semester in Indonesia', description: 'My travels around Indonesia during fall semester of 2016',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
+album3 = Album.create(user_id: 1, title: 'Summer Trip to Iceland', description: 'Exploring the beautiful countryside of Iceland',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
+album4 = Album.create(user_id: 1, title: 'Carnaval no Brazil', description: 'Photos taken throughout my trip to Brazil for Carnaval',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
+album5 = Album.create(user_id: 1, title: 'Year Abroad in Germany', description: 'Images captured throughout the year I lived in Germany',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
+
 Photo.destroy_all
 
 photo1 = Photo.create(caption: 'Overlooking the city of Guilin',
@@ -212,23 +230,6 @@ photo45 = Photo.create(caption: 'Neuschwanstein Castle, Hohenschwangau, Germany'
 photo46 = Photo.create(caption: 'Architecture of Bacharach, Germany',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495486520/14564219244_e7c3f8ef5c_z_hqxf4g.jpg',
          user_id: 1, album_id: 5)
-
-Album.destroy_all
-
-album1 = Album.create(user_id: 1, title: 'Spring Semester in China', description: 'My travels around China during spring semester of 2016',
-thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
-
-album2 = Album.create(user_id: 1, title: 'Fall Semester in Indonesia', description: 'My travels around Indonesia during fall semester of 2016',
-thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
-
-album3 = Album.create(user_id: 1, title: 'Summer Trip to Iceland', description: 'Exploring the beautiful countryside of Iceland',
-thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
-
-album4 = Album.create(user_id: 1, title: 'Carnaval no Brazil', description: 'Photos taken throughout my trip to Brazil for Carnaval',
-thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
-
-album5 = Album.create(user_id: 1, title: 'Year Abroad in Germany', description: 'Images captured throughout the year I lived in Germany',
-thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
 
 Comment.destroy_all
 

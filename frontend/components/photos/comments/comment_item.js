@@ -16,11 +16,11 @@ class CommentItem extends React.Component {
   render() {
 
     return(
-      <li>
+      <li className="comment-list-item">
         <div className="comments">
-          <text className="comment-text">{this.props.comment.username}:{this.props.comment.body}</text>
+          <text className="comment-text">{this.props.comment.username}: {this.props.comment.body}</text>
           {this.props.props.currentUser.id === this.props.comment.user_id ?
-          <button className='delete-button' onClick={this.handleDelete.bind(this)}>Delete</button> : ""}
+          <button className='comment-delete-button' onClick={this.handleDelete.bind(this)}>Delete</button> : ""}
         </div>
       </li>
     );
