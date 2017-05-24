@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 import PhotoStream from './photo_stream';
 import { fetchPhotos } from '../../actions/photo_actions';
+import { toArray } from '../../reducers/selectors';
 
 const mapStateToProps = state => ({
-  photos: state.photos,
-  user: state.session.currentUser
+  photos: toArray(state.photos)
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPhotos: () => dispatch(fetchPhotos())
+  fetchPhotos: () => dispatch(fetchPhotos({current_user: true}))
 });
 
 export default connect(

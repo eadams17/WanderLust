@@ -1,5 +1,4 @@
 import React from 'react';
-import { values, pick } from 'lodash';
 import { Link } from 'react-router-dom';
 
 class AlbumIndex extends React.Component {
@@ -25,8 +24,8 @@ class AlbumIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const albums = this.props.albums;
+
     return(
       <div className="album-container">
         <div className="album-index-buttons">

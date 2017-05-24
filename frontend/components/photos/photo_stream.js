@@ -10,20 +10,22 @@ class PhotoStream extends React.Component {
     this.handleAddClick = this.handleAddClick.bind(this);
   }
 
+  componentDidMount() {
+    this.props.fetchPhotos();
+  }
 
   handleReturnClick(e) {
     e.preventDefault();
-    this.props.history.push(`/profile/${this.props.user.username}`);
+    this.props.history.push(`/profile/${this.props.match.params.username}`);
   }
 
   handleAddClick(e) {
     e.preventDefault();
-    this.props.history.push(`/profile/${this.props.user.username}/upload`);
+    this.props.history.push(`/profile/${this.props.match.params.username}/upload`);
   }
 
   render() {
-    const photos = values(this.props.user.photos);
-    console.log(photos);
+    const photos = this.props.photos;
 
     return(
       <div className="photo-stream-page">
