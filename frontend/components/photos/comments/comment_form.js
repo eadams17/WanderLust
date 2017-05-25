@@ -46,6 +46,8 @@ class CommentForm extends React.Component {
         </ul>
         <form className="comment-form" onSubmit={ this.handleSubmit }>
           <textarea
+            rows= "4"
+            cols="30"
             type='text'
             className='comment-body'
             value={this.state.body}

@@ -36,25 +36,29 @@ class PhotoShow extends React.Component {
     const albumName = result(photoAlbum, 'title');
     return(
       <div className="photo-show-page">
-        <div className="photo-display-container">
-          <div className="photo-show-buttons">
-            <button className="return-button" onClick={this.handleReturn}>Back To Index</button>
-            {user.id === photo.user_id && (
-              <button className="delete-button" onClick={this.handleDelete}>Delete</button>
-            )}
+        <div className="display-container">
+          <div className= "left-container">
+            <div className= "tags-container">
+              {tags.map(tag => (
+                <li key={tag.id}>#{tag.tag_name}</li>
+              ))}
+            </div>
+            <div className='comment-box'>
+              <CommentContainer photoOwner={this.props.photo.user_id} photoId={parseInt(this.props.match.params.id)}/>
+            </div>
           </div>
-          <ul>
-            <li className="album-title"><p>{albumName}</p></li>
-            <li><img className="photo-display" src={photo.img_url}></img></li>
-            <li className="caption"><p>{photo.caption}</p></li>
-          </ul>
-          <div className='comment-box'>
-            <CommentContainer photoOwner={this.props.photo.user_id} photoId={parseInt(this.props.match.params.id)}/>
-          </div>
-          <div>
-            {tags.map(tag => (
-              <li key={tag.id}>{tag.tag_name}</li>
-            ))}
+          <div className="photo-display-container">
+            <div className="photo-show-buttons">
+              <button className="return-button" onClick={this.handleReturn}>Back To Index</button>
+              {user.id === photo.user_id && (
+                <button className="delete-button" onClick={this.handleDelete}>Delete</button>
+              )}
+            </div>
+            <ul>
+              <li className="album-title"><p>{albumName}</p></li>
+              <li><img className="photo-display" src={photo.img_url}></img></li>
+              <li className="caption"><p>{photo.caption}</p></li>
+            </ul>
           </div>
         </div>
       </div>
