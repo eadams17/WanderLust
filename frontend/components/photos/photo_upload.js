@@ -25,7 +25,8 @@ export let styles = {
 class PhotoUpload extends React.Component {
   constructor(props) {
     super(props);
-    const albums = this.props.albums;
+    const albums = this.props.user.albums;
+    console.log(albums);
     this.state = {
       title: '',
       caption: '',
@@ -39,12 +40,8 @@ class PhotoUpload extends React.Component {
     this.handleUpload = this.handleUpload.bind(this);
   }
 
-  componentDidMount() {
-    this.props.getAlbums();
-  }
-
   componentWillMount() {
-    this.props.fetchUser(this.props.user.id);
+    this.props.getAlbums();
     this.props.fetchTags();
   }
 
@@ -90,9 +87,8 @@ class PhotoUpload extends React.Component {
 
   render() {
 
-    const albums = this.props.albums;
+    const albums = this.props.albums.filter(album => album.user_id === this.props.user.id);
     const tags = this.props.tags;
-    console.log(this.state.tagArray);
 
     var photoUploadForm = (
       <div className="photo-upload-form">

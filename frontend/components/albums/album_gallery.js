@@ -17,7 +17,7 @@ class AlbumGallery extends React.Component {
 
   handleReturnClick(e) {
     e.preventDefault();
-    this.props.history.push(`/profile/${this.props.album.user.username}/albums`);
+    this.props.history.push(`/profile/${this.props.user.username}/albums`);
   }
 
   handleAddClick(e) {
@@ -29,6 +29,7 @@ class AlbumGallery extends React.Component {
     const photos = values(this.props.album.photos);
     const albumOwnerId = this.props.album.user_id;
     const currentUserId = this.props.user.id;
+    console.log(this.props);
 
     return(
       <div className="album-gallery-page">

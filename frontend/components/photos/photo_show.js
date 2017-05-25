@@ -28,7 +28,7 @@ class PhotoShow extends React.Component {
   }
 
   render() {
-    const tags = this.props.tags;
+    const tags = values(this.props.tags);
     const photo = this.props.photo;
     const user = this.props.user;
     const photoAlbum = values(this.props.user.albums).filter(album =>
