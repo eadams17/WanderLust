@@ -29,7 +29,7 @@ class AlbumGallery extends React.Component {
     const photos = values(this.props.album.photos);
     const albumOwnerId = this.props.album.user_id;
     const currentUserId = this.props.user.id;
-    console.log(this.props);
+    console.log(this.props.photo.album.title);
 
     return(
       <div className="album-gallery-page">

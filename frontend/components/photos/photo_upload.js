@@ -25,17 +25,18 @@ export let styles = {
 class PhotoUpload extends React.Component {
   constructor(props) {
     super(props);
-    const albums = this.props.user.albums;
-    console.log(albums);
+
     this.state = {
-      title: '',
+
       caption: '',
       img_url: '',
       user_id: this.props.user.id,
-      album_id: albums.length === 0 ? "" : albums[0].id,
+      album_id: '',
       tag_name: '',
       tagArray: []
+
     };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
   }
@@ -43,6 +44,12 @@ class PhotoUpload extends React.Component {
   componentWillMount() {
     this.props.getAlbums();
     this.props.fetchTags();
+  }
+
+  componentWillReceiveProps(newProps) {
+    if(this.props.albums.length !== newProps.albums.length) {
+      this.setState({album_id: newProps.albums[0].id});
+    }
   }
 
   handleUpload(e) {
@@ -57,6 +64,7 @@ class PhotoUpload extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
     this.state.tagArray.forEach(tag => (
       this.props.createPhotoTag(tag)
     ));
@@ -87,7 +95,7 @@ class PhotoUpload extends React.Component {
 
   render() {
 
-    const albums = this.props.albums.filter(album => album.user_id === this.props.user.id);
+    const albums = this.props.albums;
     const tags = this.props.tags;
 
     var photoUploadForm = (
@@ -100,13 +108,6 @@ class PhotoUpload extends React.Component {
         <h2>Upload New Photo</h2>
 
         <input type="text"
-          value={this.state.title}
-          placeholder="title (optional)"
-          onChange={this.update('title')}
-          className="photo-form-input"
-          />
-
-        <input type="text"
           value={this.state.caption}
           placeholder="caption (optional)"
           onChange={this.update('caption')}
@@ -116,28 +117,30 @@ class PhotoUpload extends React.Component {
         <br/><br/>
 
         <select onChange={this.update('album_id')}>
+
           {albums.map(album => (
             <option key={album.id} value={album.id}>{album.title}</option>
           ))}
         </select> *required <br/><br/>
-      <div className="tag-input">
-          <Autocomplete
-            value={this.state.tag_name}
-            items={tags}
-            getItemValue={(tag) => tag.tag_name}
-            onChange={(event, value) => this.setState({tag_name: value})}
-            onSelect={value => {
-              this.state.tagArray.push(value);
-              this.setState({tag_name: value});
-            }}
-            renderItem={(tag, isHighlighted) => (
-              <div
-                style={isHighlighted ? styles.highlightedItem : styles.tag}
-                key={tag.id}
-                >{tag.tag_name}</div>
-            )}
-            />
-        </div>
+
+        <div className="tag-input">
+            <Autocomplete
+              value={this.state.tag_name}
+              items={tags}
+              getItemValue={(tag) => tag.tag_name}
+              onChange={(event, value) => this.setState({tag_name: value})}
+              onSelect={value => {
+                this.state.tagArray.push(value);
+                this.setState({tag_name: value});
+              }}
+              renderItem={(tag, isHighlighted) => (
+                <div
+                  style={isHighlighted ? styles.highlightedItem : styles.tag}
+                  key={tag.id}
+                  >{tag.tag_name}</div>
+              )}
+              />
+          </div>
 
         <br/>
 

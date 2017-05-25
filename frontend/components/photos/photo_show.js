@@ -18,7 +18,7 @@ class PhotoShow extends React.Component {
     e.preventDefault();
     if(confirm("Are you sure you want to delete your photo?")) {
       this.props.deletePhoto(this.props.photo.id);
-      this.props.history.push('/photos');
+      this.props.history.push(`/profile/${this.props.user.username}`);
     }
   }
 
@@ -28,7 +28,7 @@ class PhotoShow extends React.Component {
   }
 
   render() {
-    const tags = values(this.props.tags);
+    const tags = this.props.tags;
     const photo = this.props.photo;
     const user = this.props.user;
     const photoAlbum = values(this.props.user.albums).filter(album =>

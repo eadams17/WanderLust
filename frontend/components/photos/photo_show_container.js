@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import PhotoShow from './photo_show';
-import { selectPhoto } from '../../reducers/selectors';
+import { selectPhoto, toArray } from '../../reducers/selectors';
 import { fetchPhoto, deletePhoto } from '../../actions/photo_actions';
 import { fetchPhotoTags } from '../../actions/tag_actions';
 
@@ -9,14 +9,14 @@ const mapStateToProps = (state, { match } ) => {
   return {
     photo,
     user: state.session.currentUser,
-    tags: state.tags
+    tags: toArray(state.tags)
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   fetchPhoto: (id) => dispatch(fetchPhoto(id)),
   deletePhoto: (id) => dispatch(deletePhoto(id)),
-  fetchPhotoTags: (id) => dispatch(fetchPhotoTags(id))
+  fetchPhotoTags: (id) => dispatch(fetchPhotoTags(id)),
 });
 
 export default connect(

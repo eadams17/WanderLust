@@ -15,7 +15,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   createPhoto: (photo) => dispatch(createPhoto(photo)),
-  getAlbums: () => dispatch(getAlbums()),
+  getAlbums: () => dispatch(getAlbums({current_user: true})),
   fetchTags: () => dispatch(fetchTags())
 });
 
