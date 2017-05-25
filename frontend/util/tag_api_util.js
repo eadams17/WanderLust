@@ -1,8 +1,7 @@
-export const fetchTags = data => (
+export const fetchTags = () => (
   $.ajax({
     method: 'GET',
     url: 'api/tags',
-    data
   })
 );
 
@@ -18,5 +17,13 @@ export const createTag = tag => (
     method: 'POST',
     url: 'api/tags',
     data: {tag}
+  })
+);
+
+export const fetchPhotoTags = id => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/photo_tags',
+    data: {id: id},
   })
 );

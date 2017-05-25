@@ -14,8 +14,15 @@ export const receiveTag = tag => ({
   tag
 });
 
-export const fetchTags = data => dispatch => (
-  APIUtil.fetchTags(data).then(
+export const fetchPhotoTags = id => dispatch => (
+  APIUtil.fetchPhotoTags(id).then(
+    (tags => dispatch(receiveTags(tags))),
+    err => dispatch(receiveErrors(err.responseJSON))
+  )
+);
+
+export const fetchTags = () => dispatch => (
+  APIUtil.fetchTags().then(
     (tags => dispatch(receiveTags(tags))),
     err => dispatch(receiveErrors(err.responseJSON))
 ));

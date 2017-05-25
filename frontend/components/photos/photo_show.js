@@ -9,12 +9,9 @@ class PhotoShow extends React.Component {
     this.handleReturn = this.handleReturn.bind(this);
   }
 
-  componentDidMount() {
-    this.props.fetchPhoto(this.props.match.params.id);
-  }
-
   componentWillMount() {
     this.props.fetchPhoto(this.props.match.params.id);
+    this.props.fetchPhotoTags(parseInt(this.props.match.params.id));
   }
 
   handleDelete(e) {
@@ -31,6 +28,7 @@ class PhotoShow extends React.Component {
   }
 
   render() {
+    const tags = this.props.tags;
     const photo = this.props.photo;
     const user = this.props.user;
     const photoAlbum = values(this.props.user.albums).filter(album =>
@@ -52,6 +50,11 @@ class PhotoShow extends React.Component {
           </ul>
           <div className='comment-box'>
             <CommentContainer photoOwner={this.props.photo.user_id} photoId={parseInt(this.props.match.params.id)}/>
+          </div>
+          <div>
+            {tags.map(tag => (
+              <li key={tag.id}>{tag.tag_name}</li>
+            ))}
           </div>
         </div>
       </div>

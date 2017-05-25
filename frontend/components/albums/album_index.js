@@ -28,7 +28,6 @@ class AlbumIndex extends React.Component {
     const currentUser = this.props.user.username;
     const pathUser = this.props.match.params.username;
     const displayedAlbums = albums.filter(album => album.user.username === pathUser);
-    console.log(this.props);
 
     return(
       <div className="album-container">

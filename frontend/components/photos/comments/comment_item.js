@@ -14,7 +14,6 @@ class CommentItem extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const currentUserId = this.props.props.currentUser.id;
     const commentUserId = this.props.comment.user_id;
     const photoOwnerId = this.props.props.photoOwner;

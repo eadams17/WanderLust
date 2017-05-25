@@ -3,7 +3,6 @@ import CommentItem from './comment_item';
 
 class CommentForm extends React.Component {
   constructor(props) {
-    console.log(props);
     super(props);
     this.state = {
       body: '',

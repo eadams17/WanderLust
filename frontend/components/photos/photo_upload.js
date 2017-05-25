@@ -1,6 +1,26 @@
 import React from 'react';
 import { Link, withRouter, Redirect } from 'react-router-dom';
 import { values } from 'lodash';
+import Autocomplete from 'react-autocomplete';
+
+export let styles = {
+  item: {
+    padding: '2px 6px',
+    cursor: 'default',
+    border: 'solid 1px black'
+  },
+
+  highlightedItem: {
+    color: 'white',
+    background: 'hsl(200, 50%, 50%)',
+    padding: '2px 6px',
+    cursor: 'default'
+  },
+
+  menu: {
+    border: 'solid 1px black'
+  }
+};
 
 class PhotoUpload extends React.Component {
   constructor(props) {
@@ -11,7 +31,9 @@ class PhotoUpload extends React.Component {
       caption: '',
       img_url: '',
       user_id: this.props.user.id,
-      album_id: albums.length === 0 ? "" : albums[0].id
+      album_id: albums.length === 0 ? "" : albums[0].id,
+      tag_name: '',
+      tagArray: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
@@ -23,6 +45,7 @@ class PhotoUpload extends React.Component {
 
   componentWillMount() {
     this.props.fetchUser(this.props.user.id);
+    this.props.fetchTags();
   }
 
   handleUpload(e) {
@@ -37,6 +60,9 @@ class PhotoUpload extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.state.tagArray.forEach(tag => (
+      this.props.createPhotoTag(tag)
+    ));
     this.props.createPhoto(this.state).then(
         (res) => this.props.history.push(
           `/profile/${this.props.user.username}/albums/${res.photo.album_id}/photos`));
@@ -65,6 +91,8 @@ class PhotoUpload extends React.Component {
   render() {
 
     const albums = this.props.albums;
+    const tags = this.props.tags;
+    console.log(this.state.tagArray);
 
     var photoUploadForm = (
       <div className="photo-upload-form">
@@ -89,13 +117,31 @@ class PhotoUpload extends React.Component {
           className="photo-form-input"
           />
 
-        <br/>
+        <br/><br/>
 
         <select onChange={this.update('album_id')}>
           {albums.map(album => (
             <option key={album.id} value={album.id}>{album.title}</option>
           ))}
-        </select> *required <br/>
+        </select> *required <br/><br/>
+      <div className="tag-input">
+          <Autocomplete
+            value={this.state.tag_name}
+            items={tags}
+            getItemValue={(tag) => tag.tag_name}
+            onChange={(event, value) => this.setState({tag_name: value})}
+            onSelect={value => {
+              this.state.tagArray.push(value);
+              this.setState({tag_name: value});
+            }}
+            renderItem={(tag, isHighlighted) => (
+              <div
+                style={isHighlighted ? styles.highlightedItem : styles.tag}
+                key={tag.id}
+                >{tag.tag_name}</div>
+            )}
+            />
+        </div>
 
         <br/>
 

@@ -244,3 +244,16 @@ comment8 = Comment.create(user_id: 1, photo_id: 33, body: "What camera do you us
 comment9 = Comment.create(user_id: 4, photo_id: 25, body: "Phenomenal!")
 comment10 = Comment.create(user_id: 2, photo_id: 13, body: "Very nice!")
 comment11 = Comment.create(user_id: 2, photo_id: 17, body: "Great shot!")
+
+Tag.destroy_all
+
+tag1 = Tag.create(tag_name: "beach")
+tag2 = Tag.create(tag_name: "city")
+tag3 = Tag.create(tag_name: "mountains")
+tag4 = Tag.create(tag_name: "architecture")
+tag5 = Tag.create(tag_name: "nature")
+tag6 = Tag.create(tag_name: "tropical")
+tag7 = Tag.create(tag_name: "winter")
+tag8 = Tag.create(tag_name: "summer")
+tag9 = Tag.create(tag_name: "waterfall")
+tag10 = Tag.create(tag_name: "sunset")
