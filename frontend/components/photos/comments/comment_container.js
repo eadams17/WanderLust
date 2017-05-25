@@ -6,7 +6,8 @@ import { toArray } from '../../../reducers/selectors';
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   comments: toArray(state.comments),
-  photoId: ownProps.photoId
+  photoId: ownProps.photoId,
+  photoOwner: ownProps.photoOwner
 });
 
 const mapDispatchToProps = dispatch => ({

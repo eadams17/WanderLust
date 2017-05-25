@@ -34,15 +34,15 @@ bug-free navigation, adequate seed data and sufficient CSS styling:
 
 ### Phase 2: Photos Model, API, and components (1.5 days)
 
-#### Objective: Photos can be uploaded, viewed, edited and deleted through the API.
+#### Objective: Photos can be uploaded, viewed and deleted through the API.
 
 ### Phase 3: Albums (1.5 days)
 
-#### Objective: Photos belong to Albums that can be created, viewed, edited and destroyed through the API.
+#### Objective: Photos belong to Albums that can be created, viewed and destroyed through the API.
 
 ### Phase 4: Comments (1 day)
 
-#### Objective: Comments belong to Photo that can be created, viewed, edited and destroyed through the API.
+#### Objective: Comments belong to Photo that can be created, viewed and destroyed through the API.
 
 ### Phase 5: Tags & Search (2 days)
 

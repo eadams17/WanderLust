@@ -25,6 +25,7 @@ class PhotoStream extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     const photos = this.props.photos;
 
     return(

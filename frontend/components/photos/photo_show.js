@@ -51,7 +51,7 @@ class PhotoShow extends React.Component {
             <li className="caption"><p>{photo.caption}</p></li>
           </ul>
           <div className='comment-box'>
-            <CommentContainer photoId={parseInt(this.props.match.params.id)}/>
+            <CommentContainer photoOwner={this.props.photo.user_id} photoId={parseInt(this.props.match.params.id)}/>
           </div>
         </div>
       </div>

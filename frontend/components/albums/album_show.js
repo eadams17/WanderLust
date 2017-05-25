@@ -1,5 +1,4 @@
 import React from 'react';
-import { values } from 'lodash';
 
 class AlbumShow extends React.Component {
   constructor(props) {
@@ -22,12 +21,12 @@ class AlbumShow extends React.Component {
 
   handleReturn(e) {
     e.preventDefault();
-    this.props.history.push(`/profile/${this.props.user.username}/albums`);
+    this.props.history.push(`/profile/${this.props.album.user.username}/albums`);
   }
 
   handleView(e) {
     e.preventDefault();
-    this.props.history.push(`/profile/${this.props.user.username}/albums/${this.props.album.id}/photos`);
+    this.props.history.push(`/profile/${this.props.album.user.username}/albums/${this.props.album.id}/photos`);
   }
 
   render() {
