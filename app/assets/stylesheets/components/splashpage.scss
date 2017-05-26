@@ -5,29 +5,59 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("http://www.abercrombiekent.co.uk/thailand/images/Thailand-Chaing-Mai-shutterstock_240784369.jpg");
+  background-image: url("http://res.cloudinary.com/explorewanderlust/image/upload/v1495831654/splash_page_background_dark_bzprz0.jpg");
+  opacity: 0.5;
   background-size: cover;
   background-repeat: no-repeat;
+}
 
-  .splash-phrase1 {
-    font: 64px 'Nixie One', bold;
-    color: white;
-    padding: 30px;
-    text-align: center;
-    text-shadow: 2px 2px 4px #000000;
-    margin-top: 80px;
-    margin-bottom: 10px;
-    width: 60%;
-  }
+.splash-phrase1 {
+  font: 40px 'Nixie One', bold;
+  color: black;
+  padding: 30px;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  margin-top: 150px;
+  width: 60%;
+  background: white;
+  align-self: center;
+  opacity: 0.5;
+}
 
-  .splash-phrase2 {
-    font: 40px 'Nixie One', bold;
-    color: white;
-    padding: 30px;
-    text-align: center;
-    text-shadow: 2px 2px 4px #000000;
-    margin-top: 80px;
-    margin-bottom: 10px;
-    width: 60%;
-  }
+.splash-phrase2-1 {
+  font: 40px 'Nixie One';
+  color: black;
+  padding: 30px;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  background: white;
+  width: 80%;
+  align-self: center;
+  opacity: 0.5;
+}
+
+.splash-phrase2-2 {
+  font: 30px 'Nixie One';
+  color: black;
+  padding: 30px;
+  text-align: center;
+  background: white;
+  width: 25%;
+  align-self: center;
+  opacity: 0.5;
+}
+
+.splash-button {
+  cursor: pointer;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.splash-button:hover {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
 }

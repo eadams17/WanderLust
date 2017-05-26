@@ -27,12 +27,13 @@ class PhotoShow extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     const tags = this.props.photo.tags;
     const photo = this.props.photo;
     const user = this.props.user;
-    const photoAlbum = values(this.props.user.albums).filter(album =>
-      album.id === photo.album_id)[0];
-    const albumName = result(photoAlbum, 'title');
+
+    const photoUser = (this.props.photo.user ? this.props.photo.user.username : "");
+    const albumName = (this.props.photo.album ? this.props.photo.album.title : "");
 
     return(
       <div className="photo-show-page">
@@ -55,7 +56,7 @@ class PhotoShow extends React.Component {
               )}
             </div>
             <ul>
-              <li className="album-title"><p>{albumName} by {this.props.user.username}</p></li>
+              <li className="album-title"><p>{albumName} by {photoUser}</p></li>
               <li><img className="photo-display" src={photo.img_url}></img></li>
               <li className="caption"><p>{photo.caption}</p></li>
             </ul>

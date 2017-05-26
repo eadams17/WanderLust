@@ -129,7 +129,7 @@ class Navbar extends React.Component {
 
   render() {
 
-    const guestUser = { email: 'drtobogan@gmail.com', password: 'password' };
+    const guestUser = { email: 'maggiethatch@gmail.com', password: 'password' };
     const { history, currentUser, login, logout, fetchTags, tags } = this.props;
 
     return(

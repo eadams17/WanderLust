@@ -6,7 +6,7 @@
   align-items: center;
   align-content: center;
   margin-top: 70px;
-  background-image: url("http://www.abercrombiekent.co.uk/thailand/images/Thailand-Chaing-Mai-shutterstock_240784369.jpg");
+  background-image: url("http://res.cloudinary.com/explorewanderlust/image/upload/v1495831906/splash-page-opaque_qrcydl.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -26,8 +26,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: scroll;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .login-form, .register-form {
