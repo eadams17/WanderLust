@@ -111,36 +111,43 @@ class PhotoUpload extends React.Component {
           className="photo-form-input"
           />
 
-        <br/><br/>
+        <h2>Select Album</h2>
 
         <select onChange={this.update('album_id')}>
 
           {albums.map(album => (
             <option key={album.id} value={album.id}>{album.title}</option>
           ))}
-        </select> *required <br/><br/>
+        </select> *required <br/>
+        <h2>Select Photo Tags</h2>
 
-        <div className="tag-input">
-            <Autocomplete
-              value={this.state.tag_name}
-              items={tags}
-              getItemValue={(tag) => tag.tag_name}
-              onChange={(event, value) => this.setState({tag_name: value})}
-              onSelect={value => {
-                this.state.tagArray.push(value);
-                this.setState({tag_name: value});
-              }}
-              renderItem={(tag, isHighlighted) => (
-                <div
-                  style={isHighlighted ? styles.highlightedItem : styles.tag}
-                  key={tag.id}
-                  >{tag.tag_name}</div>
-              )}
-              />
-          </div>
+          <Autocomplete
+            value={this.state.tag_name}
+            items={tags}
+            inputProps={{ placeholder: 'i.e. "beach"', className: "tag-input"}}
+            getItemValue={(tag) => tag.tag_name}
+            onChange={(event, value) => this.setState({tag_name: value})}
+            onSelect={value => {
+              this.state.tagArray.push(value);
+              this.setState({tag_name: value});
+            }}
+            renderItem={(tag, isHighlighted) => (
+              <div
+                style={isHighlighted ? styles.highlightedItem : styles.tag}
+                key={tag.id}
+                >{tag.tag_name}</div>
+            )}
+            />
 
           <br/>
-          <p>{this.state.tagArray.map(tag => tag + ", ")}</p>
+
+          <div className="photo-upload-tags-container">
+            <ul className="photo-upload-tags-list">
+              {this.state.tagArray.map(tag => (
+                <li>#{tag}</li>
+              ))}
+            </ul>
+          </div>
 
         <br/>
 
