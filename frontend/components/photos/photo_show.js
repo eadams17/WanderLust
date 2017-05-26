@@ -11,7 +11,6 @@ class PhotoShow extends React.Component {
 
   componentWillMount() {
     this.props.fetchPhoto(this.props.match.params.id);
-    this.props.fetchPhotoTags(parseInt(this.props.match.params.id));
   }
 
   handleDelete(e) {
@@ -28,12 +27,13 @@ class PhotoShow extends React.Component {
   }
 
   render() {
-    const tags = this.props.tags;
+    const tags = this.props.photo.tags;
     const photo = this.props.photo;
     const user = this.props.user;
     const photoAlbum = values(this.props.user.albums).filter(album =>
       album.id === photo.album_id)[0];
     const albumName = result(photoAlbum, 'title');
+    
     return(
       <div className="photo-show-page">
         <div className="display-container">
@@ -55,7 +55,7 @@ class PhotoShow extends React.Component {
               )}
             </div>
             <ul>
-              <li className="album-title"><p>{albumName}</p></li>
+              <li className="album-title"><p>{albumName} by {this.props.user.username}</p></li>
               <li><img className="photo-display" src={photo.img_url}></img></li>
               <li className="caption"><p>{photo.caption}</p></li>
             </ul>

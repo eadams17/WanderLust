@@ -1,11 +1,11 @@
 class Api::PhotoTagsController < ApplicationController
   def index
-    @photo_tags = Photo.find(params[:id]).tags
+    @photo_tags = PhotoTag.all
     render json: @photo_tags
   end
 
   def create
-    @photo_tags = PhotoTag.new({tag_id: photo_tags_params[:tag_id], photo_id: photo_tags_params[:photo_id]})
+    @photo_tags = PhotoTag.new(photo_tags_params)
     if @photo_tags.save
       render json: @photo_tags
     else

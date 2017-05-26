@@ -38,3 +38,9 @@ export const createTag = tag => dispatch => (
     (_tag => dispatch(receiveTag(_tag))),
     err => dispatch(receiveErrors(err.responseJSON))
 ));
+
+export const createPhotoTag = photoTag => dispatch => (
+  APIUtil.createPhotoTag(photoTag).then(
+    (tag => dispatch(receiveTag(tag))),
+    err => dispatch(receiveErrors(err.responseJSON))
+));

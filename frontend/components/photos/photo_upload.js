@@ -65,9 +65,6 @@ class PhotoUpload extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    this.state.tagArray.forEach(tag => (
-      this.props.createPhotoTag(tag)
-    ));
     this.props.createPhoto(this.state).then(
         (res) => this.props.history.push(
           `/profile/${this.props.user.username}/albums/${res.photo.album_id}/photos`));
@@ -141,6 +138,9 @@ class PhotoUpload extends React.Component {
               )}
               />
           </div>
+
+          <br/>
+          <p>{this.state.tagArray.map(tag => tag + ", ")}</p>
 
         <br/>
 

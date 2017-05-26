@@ -27,3 +27,11 @@ export const fetchPhotoTags = id => (
     data: {id: id},
   })
 );
+
+export const createPhotoTag = photoTag => (
+  $.ajax({
+    method: 'POST',
+    url: 'api/photo_tags',
+    data: {photoTag}
+  })
+);

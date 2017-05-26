@@ -8,15 +8,13 @@ const mapStateToProps = (state, { match } ) => {
   const photo = selectPhoto(state.photos, match.params.id);
   return {
     photo,
-    user: state.session.currentUser,
-    tags: toArray(state.tags)
+    user: state.session.currentUser
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   fetchPhoto: (id) => dispatch(fetchPhoto(id)),
-  deletePhoto: (id) => dispatch(deletePhoto(id)),
-  fetchPhotoTags: (id) => dispatch(fetchPhotoTags(id)),
+  deletePhoto: (id) => dispatch(deletePhoto(id))
 });
 
 export default connect(

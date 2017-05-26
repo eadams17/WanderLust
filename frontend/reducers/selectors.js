@@ -1,5 +1,5 @@
 export const selectPhoto = (photos, id) => {
-   const photo = photos[id] || {};
+   const photo = photos[id] || {tags: []};
    return photo;
 };
 

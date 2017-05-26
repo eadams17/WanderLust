@@ -15,10 +15,14 @@ class Api::PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(photo_params)
+    @photo = Photo.new(photo_params.except(:tagArray))
     @photo.user_id = current_user.id
 
     if @photo.save
+      photo_params[:tagArray].each do |tag_name|
+        tag_id = Tag.find_by_tag_name(tag_name).id
+        PhotoTag.create(tag_id: tag_id, photo_id: @photo.id)
+      end
       render :show
     else
       render json: @photo.errors.full_messages, status: 422
@@ -38,7 +42,8 @@ class Api::PhotosController < ApplicationController
       :caption,
       :img_url,
       :user_id,
-      :album_id
+      :album_id,
+      :tagArray => []
     )
   end
 end
