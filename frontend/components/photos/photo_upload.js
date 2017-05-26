@@ -3,25 +3,6 @@ import { Link, withRouter, Redirect } from 'react-router-dom';
 import { values } from 'lodash';
 import Autocomplete from 'react-autocomplete';
 
-export let styles = {
-  item: {
-    padding: '2px 6px',
-    cursor: 'default',
-    border: 'solid 1px black'
-  },
-
-  highlightedItem: {
-    color: 'white',
-    background: 'hsl(200, 50%, 50%)',
-    padding: '2px 6px',
-    cursor: 'default'
-  },
-
-  menu: {
-    border: 'solid 1px black'
-  }
-};
-
 const sortStates = (a, b, value) => {
   const aLower = a.tag_name.toLowerCase();
   const bLower = b.tag_name.toLowerCase();
@@ -147,7 +128,7 @@ class PhotoUpload extends React.Component {
             onChange={(event, value) => this.setState({tag_name: value})}
             onSelect={value => {
               this.state.tagArray.push(value);
-              this.setState({tag_name: value});
+              this.setState({tag_name: ''});
             }}
             shouldItemRender={matchStateToTerm}
             sortItems={sortStates}

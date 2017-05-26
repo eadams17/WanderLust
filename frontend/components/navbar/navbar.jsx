@@ -21,7 +21,11 @@ const matchStateToTerm = (state, value) => {
   );
 };
 
-const searchBar = (fetchTags, tags, update, search_term) => (
+const handleSelect = (value) => {
+
+};
+
+const searchBar = (fetchTags, tags, update, search_term, handleTagId) => (
   <div className="nav-middle">
     <label className="search-input-label">Search</label>
     <Autocomplete
@@ -31,7 +35,8 @@ const searchBar = (fetchTags, tags, update, search_term) => (
       getItemValue={(tag) => tag.tag_name}
       onChange={(e) => update(e)}
       onSelect={ value => {
-        this.setState({search_term: value});
+        const returnTagId = tags.filter(tag => tag.tag_name === value)[0].id;
+        handleTagId(returnTagId);
       }}
       shouldItemRender={matchStateToTerm}
       sortItems={sortStates}
@@ -45,34 +50,36 @@ const searchBar = (fetchTags, tags, update, search_term) => (
   </div>
 );
 
-const privateNav = (currentUser, logout, fetchTags, tags, update, search_term, setState) => (
+const privateNav = (currentUser, logout, fetchTags, tags,
+   update, search_term, handleTagId, explore) => (
   <div className="navbar">
     <div className="nav-left">
       <Link to="/" className="logo-link">
         <h1 className="logo-text">WanderLust</h1>
       </Link>
     </div>
-    { searchBar(fetchTags, tags, update, search_term) }
+    { searchBar(fetchTags, tags, update, search_term, handleTagId) }
     <div className="nav-right">
       <Link to={`/profile/${currentUser.username}`}>
         <p className="profile-link">Profile</p>
       </Link>
-      <Link to="/photos">
+      <a onClick={explore}>
         <p className="explore-link">Explore</p>
-      </Link>
+      </a>
       <button className='logout' onClick={ logout }>Sign Out</button>
     </div>
   </div>
 );
 
-const publicNav = (login, guestUser, history, fetchTags, tags, update, search_term) => (
+const publicNav = (login, guestUser, history, fetchTags, tags,
+   update, search_term, handleTagId) => (
   <div className="navbar">
     <div className="nav-left">
       <Link to="/" className="logo-link">
         <h1 className="logo-text">WanderLust</h1>
       </Link>
     </div>
-    { searchBar(fetchTags, tags, update, search_term) }
+    { searchBar(fetchTags, tags, update, search_term, handleTagId) }
     <div className="nav-right">
       <button className="guest-login" onClick={() => login(guestUser).then(
           (res) => history.push(
@@ -96,6 +103,8 @@ class Navbar extends React.Component {
       search_term: ''
     };
     this.update = this.update.bind(this);
+    this.handleTagId = this.handleTagId.bind(this);
+    this.explore = this.explore.bind(this);
   }
 
   componentWillMount() {
@@ -106,20 +115,33 @@ class Navbar extends React.Component {
     this.setState({search_term: e.currentTarget.value});
   }
 
+  handleTagId(tagId) {
+    this.props.fetchPhotos(tagId).then(
+      this.props.history.push(`/photos?query=${tagId}`)
+    );
+  }
+
+  explore() {
+    this.props.fetchPhotos().then(() => (
+      this.props.history.push('/photos')
+    ));
+  }
+
+
   render() {
 
     const guestUser = { email: 'drtobogan@gmail.com', password: 'password' };
     const { history, currentUser, login, logout, fetchTags, tags } = this.props;
-    console.log(this.state);
 
     return(
       <div>
         {(currentUser) ? (
           privateNav(currentUser, logout, fetchTags, tags,
-            this.update, this.state.search_term
+            this.update, this.state.search_term, this.handleTagId, this.explore
           )) : (
             publicNav(login, guestUser, history, fetchTags, tags,
-              this.update, this.state.search_term)
+              this.update, this.state.search_term, this.handleTagId, this.explore
+            )
           )}
       </div>
     );

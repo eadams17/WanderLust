@@ -1,25 +1,24 @@
 import React from 'react';
 import { values } from 'lodash';
 import { Link } from 'react-router-dom';
+import { withRouter} from 'react-router';
 
 class PhotoIndex extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchPhotos();
-  }
-
   componentWillMount() {
-    this.props.fetchPhotos();
+    if (!this.props.location.search) {
+      this.props.fetchPhotos();
+    }
   }
 
   render() {
     const photos = this.props.photos;
     return(
       <div className="photo-container">
-        <ul className="photo-list">
+        <div className="photo-list">
           {photos.map((photo) => (
             <div className= "photo" key={photo.id}>
               <Link to={`/photos/${photo.id}`}>
@@ -27,10 +26,10 @@ class PhotoIndex extends React.Component {
               </Link>
             </div>
           ))}
-        </ul>
+        </div>
       </div>
     );
   }
 }
 
-export default PhotoIndex;
+export default withRouter(PhotoIndex);
