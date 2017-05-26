@@ -2,7 +2,7 @@
 
 [WanderLust](https://explorewanderlust.herokuapp.com/#/) is a travel-themed photo-sharing web application inspired by Flickr built over the course of two weeks. Users can create albums and upload photos to curate galleries of their travel adventures. Users can also search and explore other user photos hosted on the application via photo tags.
 
-[Welcome Page]: https://github.com/eadams17/WanderLust/blob/master/docs/screenshots/profile_page.png
+![](/docs/screenshots/profile_page.png)
 
 # Technology
 
@@ -16,7 +16,7 @@ This application uses Rails, a back-end model-view-controller web framework, for
 * User comments
 * Searchable photo tags
 
-#Implementation
+# Implementation
 
 ## Photos, Albums and Comments
 
@@ -26,7 +26,7 @@ The application makes use of the cloud-based image host Cloudinary for storing a
 
 Each photo can be viewed with a display of itself and its associated tags and comments. Comments are listed alongside the photo display with a comment form underneath. Users can add and delete photo comments, and users can delete any comments made on their photos. Comments are fetched from the back-end based on the comment-photo rails association.
 
-[photo view display]: https://github.com/eadams17/WanderLust/blob/master/docs/screenshots/photo_view.png
+![](/docs/screenshots/photo_view.png)
 
 
 ## Tags and Search
