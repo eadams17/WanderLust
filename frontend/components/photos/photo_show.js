@@ -33,7 +33,7 @@ class PhotoShow extends React.Component {
     const photoAlbum = values(this.props.user.albums).filter(album =>
       album.id === photo.album_id)[0];
     const albumName = result(photoAlbum, 'title');
-    
+
     return(
       <div className="photo-show-page">
         <div className="display-container">

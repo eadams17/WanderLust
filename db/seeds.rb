@@ -257,3 +257,14 @@ tag7 = Tag.create(tag_name: "winter")
 tag8 = Tag.create(tag_name: "summer")
 tag9 = Tag.create(tag_name: "waterfall")
 tag10 = Tag.create(tag_name: "sunset")
+
+PhotoTag.destroy_all
+
+PhotoTag.create(photo1.id, tag3.id)
+PhotoTag.create(photo1.id, tag5.id)
+PhotoTag.create(photo1.id, tag10.id)
+
+PhotoTag.create(photo2.id, tag2.id)
+PhotoTag.create(photo2.id, tag3.id)
+PhotoTag.create(photo2.id, tag4.id)
+PhotoTag.create(photo2.id, tag10.id)

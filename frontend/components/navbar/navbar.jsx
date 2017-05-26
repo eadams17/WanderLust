@@ -27,11 +27,11 @@ const handleSelect = (value) => {
 
 const searchBar = (fetchTags, tags, update, search_term, handleTagId) => (
   <div className="nav-middle">
-    <label className="search-input-label">Search</label>
+    <i className="fa fa-search"></i>
     <Autocomplete
       value={search_term}
       items={tags}
-      inputProps={{ placeholder: 'search for tags (i.e. "beach")', className: "search-input"}}
+      inputProps={{ placeholder: 'search for photos by tags (i.e. "beach")', className: "search-input"}}
       getItemValue={(tag) => tag.tag_name}
       onChange={(e) => update(e)}
       onSelect={ value => {
@@ -79,7 +79,6 @@ const publicNav = (login, guestUser, history, fetchTags, tags,
         <h1 className="logo-text">WanderLust</h1>
       </Link>
     </div>
-    { searchBar(fetchTags, tags, update, search_term, handleTagId) }
     <div className="nav-right">
       <button className="guest-login" onClick={() => login(guestUser).then(
           (res) => history.push(
