@@ -16,8 +16,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   createPhoto: (photo) => dispatch(createPhoto(photo)),
   getAlbums: () => dispatch(getAlbums({current_user: true})),
-  fetchTags: () => dispatch(fetchTags()),
-  createPhotoTag: (tag) => dispatch(createPhotoTag(tag))
+  fetchTags: () => dispatch(fetchTags())
 });
 
 export default connect(

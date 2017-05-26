@@ -22,6 +22,24 @@ export let styles = {
   }
 };
 
+const sortStates = (a, b, value) => {
+  const aLower = a.tag_name.toLowerCase();
+  const bLower = b.tag_name.toLowerCase();
+  const valueLower = value.toLowerCase();
+  const queryPosA = aLower.indexOf(valueLower);
+  const queryPosB = bLower.indexOf(valueLower);
+  if (queryPosA !== queryPosB) {
+    return queryPosA - queryPosB;
+  }
+  return aLower < bLower ? -1 : 1;
+};
+
+const matchStateToTerm = (state, value) => {
+  return (
+    state.tag_name.toLowerCase().indexOf(value.toLowerCase()) !== -1
+  );
+};
+
 class PhotoUpload extends React.Component {
   constructor(props) {
     super(props);
@@ -131,9 +149,11 @@ class PhotoUpload extends React.Component {
               this.state.tagArray.push(value);
               this.setState({tag_name: value});
             }}
+            shouldItemRender={matchStateToTerm}
+            sortItems={sortStates}
             renderItem={(tag, isHighlighted) => (
               <div
-                style={isHighlighted ? styles.highlightedItem : styles.tag}
+                className={isHighlighted ? 'highlighted-term' : 'list-term'}
                 key={tag.id}
                 >{tag.tag_name}</div>
             )}
@@ -144,7 +164,7 @@ class PhotoUpload extends React.Component {
           <div className="photo-upload-tags-container">
             <ul className="photo-upload-tags-list">
               {this.state.tagArray.map(tag => (
-                <li>#{tag}</li>
+                <li key={tag.id}>#{tag}</li>
               ))}
             </ul>
           </div>

@@ -20,13 +20,6 @@ export const createTag = tag => (
   })
 );
 
-export const fetchPhotoTags = id => (
-  $.ajax({
-    method: 'GET',
-    url: 'api/photo_tags',
-    data: {id: id},
-  })
-);
 
 export const createPhotoTag = photoTag => (
   $.ajax({

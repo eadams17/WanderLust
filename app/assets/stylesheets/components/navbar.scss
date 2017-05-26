@@ -36,3 +36,41 @@
 .logo-text:hover {
   transform: scale(1.05);
 }
+
+.nav-middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  border: 3px solid #516425;
+  width: 300px;
+  margin-left: 10px;
+  font: 16px 'Nixie One', bold;
+}
+
+.search-input {
+  padding: 5px;
+}
+
+.search-input-label {
+  font: 20px 'Nixie One', bold;
+  color: #516425;
+  padding: 20px;
+}
+
+.highlighted-term {
+  color: white;
+  background: #516425;
+  padding: 2px 6px;
+  cursor: default;
+  font: 16px 'Nixie One', bold;
+}
+
+.list-term {
+  padding: 2px 6px;
+  cursor: default;
+  font: 16px 'Nixie One', bold;
+}
