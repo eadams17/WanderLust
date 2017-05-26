@@ -4,7 +4,6 @@
   background-image: url("http://res.cloudinary.com/explorewanderlust/image/upload/v1495832215/profile-background-opaque_rdibbe.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.5);
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -26,7 +25,7 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   font: 20px 'Nixie One', cursive;
