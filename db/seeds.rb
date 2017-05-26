@@ -44,6 +44,9 @@ thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hu
 album5 = Album.create(user_id: 1, title: 'Year Abroad in Germany', description: 'Images captured throughout the year I lived in Germany',
 thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
 
+album6 = Album.create(user_id: 2, title: 'Cheeky Little Trip to Canada', description: 'Some photos I took during a quick tour around Canada',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
 
 Photo.destroy_all
 
@@ -231,6 +234,42 @@ photo46 = Photo.create(caption: 'Architecture of Bacharach, Germany',
          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495486520/14564219244_e7c3f8ef5c_z_hqxf4g.jpg',
          user_id: 1, album_id: 5)
 
+photo47 = Photo.create(caption: 'Watefalls at Canmore, Alberta, Canada',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495821126/33607683733_2253515b91_z_ahi4vw.jpg',
+         user_id: 2, album_id: 6)
+
+photo48 = Photo.create(caption: 'Horeshoe Falls in Ontaria, Canada',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495821126/33242679361_caf9e62af6_z_vaizqx.jpg',
+         user_id: 2, album_id: 6)
+
+photo49 = Photo.create(caption: 'Lady of the Mist at Niagara Falls, Ontario, Canada',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495821126/32987790450_ccc8fe3823_z_nwuub3.jpg',
+         user_id: 2, album_id: 6)
+
+photo50 = Photo.create(caption: 'Tour at Horseshoe Falls in Ontario, Canada',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495821125/32987775150_37421e24af_z_sa4jkr.jpg',
+         user_id: 2, album_id: 6)
+
+photo51 = Photo.create(caption: 'Crowfoot Mountain, British Columbia, Canada',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495821125/13156906733_27e2f04f8b_z_fcpona.jpg',
+         user_id: 2, album_id: 6)
+
+photo52 = Photo.create(caption: 'Canada Day Fireworks in Toronto, Canada',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495821125/9179810679_23b787357b_z_njrwxz.jpg',
+         user_id: 2, album_id: 6)
+
+photo53 = Photo.create(caption: 'Nortern Lights in Alberta, Canada',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495821125/9163549047_09e3e37b91_z_fejsxl.jpg',
+         user_id: 2, album_id: 6)
+
+photo54 = Photo.create(caption: 'Aerial View of Niagara Falls, Canada',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495821125/9058987459_1469ec4220_z_q5sdbr.jpg',
+         user_id: 2, album_id: 6)
+
+photo55 = Photo.create(caption: 'River in Banff, Alberta, Canada',
+         img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1495821125/8168751119_22eb2d5c19_z_ljfznt.jpg',
+         user_id: 2, album_id: 6)
+
 Comment.destroy_all
 
 comment1 = Comment.create(user_id: 2, photo_id: 1, body: "Great shot!")
@@ -251,20 +290,312 @@ tag1 = Tag.create(tag_name: "beach")
 tag2 = Tag.create(tag_name: "city")
 tag3 = Tag.create(tag_name: "mountains")
 tag4 = Tag.create(tag_name: "architecture")
-tag5 = Tag.create(tag_name: "nature")
+tag5 = Tag.create(tag_name: "night")
 tag6 = Tag.create(tag_name: "tropical")
 tag7 = Tag.create(tag_name: "winter")
 tag8 = Tag.create(tag_name: "summer")
 tag9 = Tag.create(tag_name: "waterfall")
 tag10 = Tag.create(tag_name: "sunset")
+tag11 = Tag.create(tag_name: "spring")
+tag12 = Tag.create(tag_name: "autumn")
+tag13 = Tag.create(tag_name: "river")
 
 PhotoTag.destroy_all
 
-PhotoTag.create(photo1.id, tag3.id)
-PhotoTag.create(photo1.id, tag5.id)
-PhotoTag.create(photo1.id, tag10.id)
+#photo1
 
-PhotoTag.create(photo2.id, tag2.id)
-PhotoTag.create(photo2.id, tag3.id)
-PhotoTag.create(photo2.id, tag4.id)
-PhotoTag.create(photo2.id, tag10.id)
+PhotoTag.create(photo_id: photo1.id, tag_id: tag3.id)
+
+PhotoTag.create(photo_id: photo1.id, tag_id: tag10.id)
+PhotoTag.create(photo_id: photo1.id, tag_id: tag13.id)
+
+#photo2
+
+PhotoTag.create(photo_id: photo2.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo2.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo2.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo2.id, tag_id: tag10.id)
+
+#photo3
+
+PhotoTag.create(photo_id: photo3.id, tag_id: tag3.id)
+
+#photo4
+
+PhotoTag.create(photo_id: photo4.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo4.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo4.id, tag_id: tag5.id)
+
+#photo5
+
+PhotoTag.create(photo_id: photo5.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo5.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo5.id, tag_id: tag8.id)
+
+#photo6
+
+PhotoTag.create(photo_id: photo6.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo6.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo6.id, tag_id: tag13.id)
+
+#photo7
+
+PhotoTag.create(photo_id: photo7.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo7.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo7.id, tag_id: tag5.id)
+PhotoTag.create(photo_id: photo7.id, tag_id: tag8.id)
+
+#photo8
+
+PhotoTag.create(photo_id: photo8.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo8.id, tag_id: tag8.id)
+
+#photo9
+
+PhotoTag.create(photo_id: photo9.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo9.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo9.id, tag_id: tag10.id)
+
+#photo10
+
+PhotoTag.create(photo_id: photo10.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo10.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo10.id, tag_id: tag5.id)
+
+#photo11
+
+PhotoTag.create(photo_id: photo11.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo11.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo11.id, tag_id: tag8.id)
+
+#photo12
+
+PhotoTag.create(photo_id: photo12.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo12.id, tag_id: tag6.id)
+
+#photo13
+
+PhotoTag.create(photo_id: photo13.id, tag_id: tag1.id)
+PhotoTag.create(photo_id: photo13.id, tag_id: tag6.id)
+PhotoTag.create(photo_id: photo13.id, tag_id: tag10.id)
+
+#photo14
+
+PhotoTag.create(photo_id: photo14.id, tag_id: tag3.id)
+
+#photo15
+
+PhotoTag.create(photo_id: photo15.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo15.id, tag_id: tag10.id)
+
+#photo16
+
+PhotoTag.create(photo_id: photo16.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo16.id, tag_id: tag6.id)
+
+#photo17
+
+PhotoTag.create(photo_id: photo17.id, tag_id: tag1.id)
+PhotoTag.create(photo_id: photo17.id, tag_id: tag6.id)
+PhotoTag.create(photo_id: photo17.id, tag_id: tag10.id)
+
+#photo18
+
+PhotoTag.create(photo_id: photo18.id, tag_id: tag1.id)
+PhotoTag.create(photo_id: photo18.id, tag_id: tag4.id)
+
+#photo19
+
+PhotoTag.create(photo_id: photo19.id, tag_id: tag1.id)
+PhotoTag.create(photo_id: photo19.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo19.id, tag_id: tag6.id)
+PhotoTag.create(photo_id: photo19.id, tag_id: tag10.id)
+
+#photo20
+
+PhotoTag.create(photo_id: photo20.id, tag_id: tag9.id)
+PhotoTag.create(photo_id: photo20.id, tag_id: tag13.id)
+
+#photo21
+
+PhotoTag.create(photo_id: photo21.id, tag_id: tag1.id)
+PhotoTag.create(photo_id: photo21.id, tag_id: tag7.id)
+
+#photo22
+
+PhotoTag.create(photo_id: photo22.id, tag_id: tag3.id)
+
+#photo23
+
+PhotoTag.create(photo_id: photo23.id, tag_id: tag9.id)
+
+#photo24
+
+PhotoTag.create(photo_id: photo24.id, tag_id: tag4.id)
+
+#photo25
+
+PhotoTag.create(photo_id: photo25.id, tag_id: tag13.id)
+
+#photo26
+
+PhotoTag.create(photo_id: photo26.id, tag_id: tag3.id)
+
+#photo27
+
+PhotoTag.create(photo_id: photo27.id, tag_id: tag13.id)
+
+#photo28
+
+PhotoTag.create(photo_id: photo28.id, tag_id: tag7.id)
+PhotoTag.create(photo_id: photo28.id, tag_id: tag9.id)
+PhotoTag.create(photo_id: photo28.id, tag_id: tag13.id)
+
+#photo29
+
+PhotoTag.create(photo_id: photo29.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo29.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo29.id, tag_id: tag6.id)
+
+#photo30
+
+PhotoTag.create(photo_id: photo30.id, tag_id: tag1.id)
+PhotoTag.create(photo_id: photo30.id, tag_id: tag6.id)
+
+#photo31
+
+PhotoTag.create(photo_id: photo31.id, tag_id: tag1.id)
+PhotoTag.create(photo_id: photo31.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo31.id, tag_id: tag6.id)
+PhotoTag.create(photo_id: photo31.id, tag_id: tag10.id)
+
+#photo32
+
+PhotoTag.create(photo_id: photo32.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo32.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo32.id, tag_id: tag10.id)
+
+#photo33
+
+PhotoTag.create(photo_id: photo33.id, tag_id: tag1.id)
+PhotoTag.create(photo_id: photo33.id, tag_id: tag6.id)
+
+#photo34
+
+PhotoTag.create(photo_id: photo34.id, tag_id: tag6.id)
+
+#photo35
+
+PhotoTag.create(photo_id: photo35.id, tag_id: tag6.id)
+PhotoTag.create(photo_id: photo35.id, tag_id: tag13.id)
+
+#photo36
+
+PhotoTag.create(photo_id: photo36.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo36.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo36.id, tag_id: tag5.id)
+
+#photo37
+
+PhotoTag.create(photo_id: photo37.id, tag_id: tag1.id)
+PhotoTag.create(photo_id: photo37.id, tag_id: tag6.id)
+
+#photo38
+
+PhotoTag.create(photo_id: photo38.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo38.id, tag_id: tag8.id)
+PhotoTag.create(photo_id: photo38.id, tag_id: tag13.id)
+
+#photo39
+
+PhotoTag.create(photo_id: photo39.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo39.id, tag_id: tag7.id)
+
+#photo40
+
+PhotoTag.create(photo_id: photo40.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo40.id, tag_id: tag8.id)
+PhotoTag.create(photo_id: photo40.id, tag_id: tag13.id)
+
+#photo41
+
+PhotoTag.create(photo_id: photo41.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo41.id, tag_id: tag8.id)
+PhotoTag.create(photo_id: photo41.id, tag_id: tag13.id)
+
+#photo42
+
+PhotoTag.create(photo_id: photo42.id, tag_id: tag12.id)
+PhotoTag.create(photo_id: photo42.id, tag_id: tag13.id)
+
+#photo43
+
+PhotoTag.create(photo_id: photo43.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo43.id, tag_id: tag11.id)
+
+#photo44
+
+PhotoTag.create(photo_id: photo44.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo44.id, tag_id: tag8.id)
+
+#photo45
+
+PhotoTag.create(photo_id: photo45.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo45.id, tag_id: tag7.id)
+
+#photo46
+
+PhotoTag.create(photo_id: photo46.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo46.id, tag_id: tag8.id)
+
+#photo47
+
+PhotoTag.create(photo_id: photo47.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo47.id, tag_id: tag11.id)
+PhotoTag.create(photo_id: photo47.id, tag_id: tag13.id)
+
+#photo48
+
+PhotoTag.create(photo_id: photo48.id, tag_id: tag8.id)
+PhotoTag.create(photo_id: photo48.id, tag_id: tag9.id)
+PhotoTag.create(photo_id: photo48.id, tag_id: tag13.id)
+
+#photo49
+
+PhotoTag.create(photo_id: photo49.id, tag_id: tag8.id)
+PhotoTag.create(photo_id: photo49.id, tag_id: tag9.id)
+PhotoTag.create(photo_id: photo49.id, tag_id: tag13.id)
+
+#photo50
+
+PhotoTag.create(photo_id: photo50.id, tag_id: tag9.id)
+
+#photo51
+
+PhotoTag.create(photo_id: photo51.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo51.id, tag_id: tag7.id)
+PhotoTag.create(photo_id: photo51.id, tag_id: tag13.id)
+
+#photo52
+
+PhotoTag.create(photo_id: photo52.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo52.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo52.id, tag_id: tag5.id)
+PhotoTag.create(photo_id: photo52.id, tag_id: tag8.id)
+
+#photo53
+
+PhotoTag.create(photo_id: photo53.id, tag_id: tag5.id)
+PhotoTag.create(photo_id: photo53.id, tag_id: tag8.id)
+
+#photo54
+
+PhotoTag.create(photo_id: photo54.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo54.id, tag_id: tag8.id)
+PhotoTag.create(photo_id: photo54.id, tag_id: tag9.id)
+PhotoTag.create(photo_id: photo54.id, tag_id: tag13.id)
+
+#photo55
+
+PhotoTag.create(photo_id: photo55.id, tag_id: tag8.id)
+PhotoTag.create(photo_id: photo55.id, tag_id: tag13.id)
