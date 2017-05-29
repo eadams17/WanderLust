@@ -21,10 +21,6 @@ const matchStateToTerm = (state, value) => {
   );
 };
 
-const handleSelect = (value) => {
-
-};
-
 const searchBar = (fetchTags, tags, update, search_term, handleTagId) => (
   <div className="nav-middle">
     <i className="fa fa-search"></i>

@@ -11,6 +11,9 @@
     "doc": "docs",
     "test": "test"
   },
+  "devDependencies": {
+  "redux-logger": "^2.8.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch",

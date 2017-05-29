@@ -27,7 +27,6 @@ class PhotoShow extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const tags = this.props.photo.tags;
     const photo = this.props.photo;
     const user = this.props.user;

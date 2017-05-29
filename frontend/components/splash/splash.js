@@ -14,7 +14,6 @@ class Splash extends React.Component {
 
   loginGuest (e) {
     e.preventDefault();
-    console.log('clicked');
     const guestUser = { email: 'maggiethatch@gmail.com', password: 'password' };
     this.props.login(guestUser).then(
       (res) => this.props.history.push(
@@ -22,7 +21,6 @@ class Splash extends React.Component {
   }
 
   render(){
-    console.log(this.props);
 
     if (this.props.currentUser) {
       return(
