@@ -5,8 +5,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("https://res.cloudinary.com/explorewanderlust/image/upload/v1495831654/splash_page_background_dark_bzprz0.jpg");
-  opacity: 0.5;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -57,4 +55,20 @@
 .splash-button:hover {
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: black;
+}
+
+.splash-video video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
 }
