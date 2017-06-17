@@ -62,7 +62,7 @@ const privateNav = (currentUser, logout, fetchTags, tags,
       <a onClick={explore}>
         <p className="explore-link">Explore</p>
       </a>
-      <button className='logout' onClick={ logout }>Sign Out</button>
+      <button className='logout' onClick={ () => logout() }>Sign Out</button>
     </div>
   </div>
 );
