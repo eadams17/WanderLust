@@ -89,6 +89,22 @@ class PhotoUpload extends React.Component {
     );
   }
 
+  renderButtons() {
+    if(this.state.img_url === "") {
+      return(
+        <button className="upload-button" onClick={this.handleUpload}>Choose Photo</button>
+      );
+    } else {
+      return(
+        <div className="preview-submit-container">
+          <img className='image-preview'src={this.state.img_url}/>
+          <br/>
+          <button className="submit-button">Upload Photo</button>
+        </div>
+      );
+    }
+  }
+
   render() {
 
     const albums = this.props.albums.filter(album => album.user_id === this.props.user.id);
@@ -160,10 +176,7 @@ class PhotoUpload extends React.Component {
 
         <br/>
 
-        {this.state.img_url === "" ? <button className="upload-button" onClick={this.handleUpload}>Choose Photo</button> :
-        <img className='image-preview'src={this.state.img_url}/>}
-        <br/>
-        <button className="submit-button">Upload Photo</button>
+        {this.renderButtons()}
       </div>
     );
 
