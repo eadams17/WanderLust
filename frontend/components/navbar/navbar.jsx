@@ -78,7 +78,7 @@ const publicNav = (login, guestUser, history, fetchTags, tags,
     <div className="nav-right">
       <button className="guest-login" onClick={() => login(guestUser).then(
           (res) => history.push(
-            `/profile/${res.currentUser.username}`))}>Guest</button>
+            '/photos'))}>Guest</button>
           <Link to="/login">
             <p className="sign-in">Sign In</p>
           </Link>

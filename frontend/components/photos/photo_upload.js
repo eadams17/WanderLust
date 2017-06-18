@@ -91,7 +91,8 @@ class PhotoUpload extends React.Component {
 
   render() {
 
-    const albums = this.props.albums;
+    const albums = this.props.albums.filter(album => album.user_id === this.props.user.id);
+    console.log(albums);
     const tags = this.props.tags;
 
     var photoUploadForm = (
