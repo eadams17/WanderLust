@@ -101,6 +101,8 @@
   display: flex;
   justify-content: center;
   max-width: 78%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .photo-upload-tags-list {
@@ -109,7 +111,7 @@
   flex-wrap: wrap;
   max-width: 80%;
 
-  li {
+  p {
     padding: 3px;
     font: 12px 'Nixie One', cursive;
   }

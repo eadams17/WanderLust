@@ -117,9 +117,9 @@ class PhotoUpload extends React.Component {
 
           {albums.map(album => (
             <option key={album.id} value={album.id}>{album.title}</option>
-          ))}
+          ))}<br/>
         </select> *required <br/>
-        <h2>Select Photo Tags</h2>
+      <h2>Select Tags (Up to 8)</h2>
 
           <Autocomplete
             value={this.state.tag_name}
@@ -128,8 +128,15 @@ class PhotoUpload extends React.Component {
             getItemValue={(tag) => tag.tag_name}
             onChange={(event, value) => this.setState({tag_name: value})}
             onSelect={value => {
-              this.state.tagArray.push(value);
-              this.setState({tag_name: ''});
+              const chosenTags = this.state.tagArray;
+              if(chosenTags.length === 8) {
+                alert("Maximum amount of tags selected");
+              } else if(chosenTags.includes(value)) {
+                alert("Tag already selected");
+              } else {
+                chosenTags.push(value);
+                this.setState({tag_name: ''});
+              }
             }}
             shouldItemRender={matchStateToTerm}
             sortItems={sortStates}
@@ -146,7 +153,7 @@ class PhotoUpload extends React.Component {
           <div className="photo-upload-tags-container">
             <div className="photo-upload-tags-list">
               {this.state.tagArray.map(tag => (
-                <li key={tag.id}>#{tag}</li>
+                <p key={tag.id}>#{tag}</p>
               ))}
             </div>
           </div>
