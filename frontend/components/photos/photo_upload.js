@@ -166,12 +166,10 @@ class PhotoUpload extends React.Component {
 
           <br/>
 
-          <div className="photo-upload-tags-container">
-            <div className="photo-upload-tags-list">
-              {this.state.tagArray.map(tag => (
-                <p key={tag.id}>#{tag}</p>
-              ))}
-            </div>
+          <div className="photo-upload-tags-list">
+            {this.state.tagArray.map(tag => (
+              <p key={tag.id}>#{tag}</p>
+            ))}
           </div>
 
         <br/>

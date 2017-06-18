@@ -30,6 +30,18 @@ class CommentForm extends React.Component {
     return e => this.setState({[prop]: e.target.value});
   }
 
+  renderButton() {
+    if(this.state.body === "") {
+      return(
+        <button disabled className="add-comment-button">Add</button>
+      );
+    } else {
+      return(
+        <button className="add-comment-button">Add</button>
+      );
+    }
+  }
+
 
   render() {
     const comments = this.props.comments.filter(
@@ -53,7 +65,7 @@ class CommentForm extends React.Component {
             value={this.state.body}
             placeholder='Add a comment.'
             onChange={this.update('body')}/>
-          <button className="add-comment-button">Add</button>
+          {this.renderButton()}
         </form>
       </div>
     );
