@@ -108,7 +108,6 @@ class PhotoUpload extends React.Component {
   render() {
 
     const albums = this.props.albums.filter(album => album.user_id === this.props.user.id);
-    console.log(albums);
     const tags = this.props.tags;
 
     var photoUploadForm = (
@@ -133,7 +132,7 @@ class PhotoUpload extends React.Component {
 
           {albums.map(album => (
             <option key={album.id} value={album.id}>{album.title}</option>
-          ))}<br/>
+          ))}
         </select> *required <br/>
       <h2>Select Tags (Up to 8)</h2>
 

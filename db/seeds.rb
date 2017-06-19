@@ -283,6 +283,7 @@ comment8 = Comment.create(user_id: 1, photo_id: 33, body: "What camera do you us
 comment9 = Comment.create(user_id: 4, photo_id: 25, body: "Phenomenal!")
 comment10 = Comment.create(user_id: 2, photo_id: 13, body: "Very nice!")
 comment11 = Comment.create(user_id: 2, photo_id: 17, body: "Great shot!")
+comment12 = Comment.create(user_id: 2, photo_id: 17, body: "Great shot!")
 
 Tag.destroy_all
 

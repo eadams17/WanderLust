@@ -18,7 +18,7 @@ class Splash extends React.Component {
     const guestUser = { email: 'maggiethatch@gmail.com', password: 'password' };
     this.props.login(guestUser).then(
       (res) => this.props.history.push(
-        `/profile/${res.currentUser.username}`));
+        '/photos'));
   }
 
   splashVideo() {

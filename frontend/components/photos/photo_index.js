@@ -18,14 +18,16 @@ class PhotoIndex extends React.Component {
     const photos = this.props.photos;
     return(
       <div className="photo-container">
-        <div className="photo-list">
-          {photos.map((photo) => (
-            <div className= "photo" key={photo.id}>
-              <Link to={`/photos/${photo.id}`}>
-                <img src={ photo.img_url }/>
-              </Link>
-            </div>
-          ))}
+        <div className ="photo-overlay">  
+          <div className="photo-list">
+            {photos.map((photo) => (
+              <div className= "photo" key={photo.id}>
+                <Link to={`/photos/${photo.id}`}>
+                  <img src={ photo.img_url }/>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );

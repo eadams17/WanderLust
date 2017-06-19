@@ -23,7 +23,7 @@ const matchStateToTerm = (state, value) => {
 
 const searchBar = (fetchTags, tags, update, search_term, handleTagId) => (
   <div className="nav-middle">
-    <i className="fa fa-search"></i>
+    <i id="search-icon" className="fa fa-search"></i>
     <Autocomplete
       value={search_term}
       items={tags}
@@ -50,7 +50,7 @@ const privateNav = (currentUser, logout, fetchTags, tags,
    update, search_term, handleTagId, explore) => (
   <div className="navbar">
     <div className="nav-left">
-      <Link to="/" className="logo-link">
+      <Link to="/photos" className="logo-link">
         <h1 className="logo-text">WanderLust</h1>
       </Link>
     </div>
