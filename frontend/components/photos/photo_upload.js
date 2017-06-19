@@ -106,6 +106,7 @@ class PhotoUpload extends React.Component {
   }
 
   render() {
+    console.log(this.props);
 
     const albums = this.props.albums.filter(album => album.user_id === this.props.user.id);
     const tags = this.props.tags;
