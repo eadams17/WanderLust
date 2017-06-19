@@ -35,13 +35,11 @@ When a user uploads a photo, they can select from a similar auto-complete drop d
 
 A user can also browse other users' photos by searching for various tags (ie. 'beach'). Search terms are entered into a auto-complete enabled search bar located in the navigation bar. This auto-complete, drop-down search bar functionality was implemented via React's autocomplete NPM package. The search bar, shown below, has drop-down functionality to populate results based on character input from the user.
 
-//drop-down photo goes here//
+![](/docs/screenshots/search_bar.png)
 
 The search bar component takes this particular search-term slice of state and passes it to the photos controller as a search query param. It hits the same photo index API endpoint, but only returns photos matched to that search term's tag ID. The display below the navigation bar is then re-rendered with a display of all of the photos tagged by that particular tag.
 
 ```javascript
-
-//Search Bar Component//
 
 const searchBar = (fetchTags, tags, update, search_term, handleTagId) => (
   <div className="nav-middle">
@@ -67,21 +65,6 @@ const searchBar = (fetchTags, tags, update, search_term, handleTagId) => (
       />
   </div>
 );
-
-//Photo Index Component
-
-class PhotoIndex extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  componentWillMount() {
-    if (!this.props.location.search) {
-      this.props.fetchPhotos();
-    }
-  }
-}
-
 ```
 
 ## Additional Features
