@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
       redirect: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.splashVideo = this.splashVideo.bind(this);
   }
 
   handleSubmit(e) {
@@ -27,6 +28,22 @@ class SessionForm extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
+  }
+
+  splashVideo() {
+    return (
+      <div className="splash-video">
+        <video
+          controls muted
+          autoPlay="autoplay"
+          loop="loop">
+          <source
+            className="mp4"
+            type="video/mp4"
+            src="https://res.cloudinary.com/explorewanderlust/video/upload/v1497557744/splash_video_g5tvoy.mp4" />
+        </video>
+      </div>
+    );
   }
 
   renderErrors() {
@@ -124,6 +141,7 @@ class SessionForm extends React.Component {
 
     return (
       <div className="auth-page">
+        {this.splashVideo()}
         <form onSubmit={this.handleSubmit} className="login-form-box">
           {this.renderErrors()}
           { loginform }
