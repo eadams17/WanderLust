@@ -47,6 +47,9 @@ thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hu
 album6 = Album.create(user_id: 2, title: 'Cheeky Little Trip to Canada', description: 'Some photos I took during a quick tour around Canada',
 thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
 
+album7 = Album.create(user_id: 6, title: 'Backpacking Through Japan', description: 'My journey throughout the country of Japan',
+thumbnail_url: 'https://previews.123rf.com/images/hugolacasse/hugolacasse1101/hugolacasse110100110/8626973-Passport-stamps-Stock-Vector-passport-stamp-visa.jpg')
+
 
 Photo.destroy_all
 
@@ -270,20 +273,328 @@ photo55 = Photo.create(caption: 'River in Banff, Alberta, Canada',
          img_url: 'https://res.cloudinary.com/explorewanderlust/image/upload/v1495821125/8168751119_22eb2d5c19_z_ljfznt.jpg',
          user_id: 2, album_id: 6)
 
+photo56 = Photo.create(caption: 'Nezu Garden, Tokyo',
+          img_url: 'https://res.cloudinary.com/explorewanderlust/image/upload/v1498200561/35369015775_f472cf543e_z_tvrr0w.jpg',
+          user_id: 6, album_id: 7)
+
+photo57 = Photo.create(caption: 'Kinkaku-ji, Golden Temple, Kyoto',
+          img_url: 'https://res.cloudinary.com/explorewanderlust/image/upload/v1498200561/34783944500_dd4130f327_z_msumky.jpg',
+          user_id: 6, album_id: 7)
+
+photo58 = Photo.create(caption: 'Temple Near Kyoto',
+          img_url: 'https://res.cloudinary.com/explorewanderlust/image/upload/v1498200561/34290637324_b9dbe76fe7_z_jzn5dt.jpg',
+          user_id: 6, album_id: 7)
+
+photo59 = Photo.create(caption: 'Autumn In Kyoto',
+          img_url: 'https://res.cloudinary.com/explorewanderlust/image/upload/v1498200561/32790374984_5a6805bdd8_z_it9neu.jpg',
+          user_id: 6, album_id: 7)
+
+photo60 = Photo.create(caption: 'Winter In Sapporo',
+          img_url: 'http://res.cloudinary.com/explorewanderlust/image/upload/v1498200560/32385357080_3926d949c1_z_qgmaqe.jpg',
+          user_id: 6, album_id: 7)
+
+photo61 = Photo.create(caption: 'Cherry Blossoms in Kitanomaru Park',
+          img_url: 'https://res.cloudinary.com/explorewanderlust/image/upload/v1498200560/25546580673_45b58948bb_z_satqop.jpg',
+          user_id: 6, album_id: 7)
+
+photo62 = Photo.create(caption: 'Mt. Fuji From Oshino',
+          img_url: 'https://res.cloudinary.com/explorewanderlust/image/upload/v1498200559/16577371471_a0c1dfbdf8_z_jjufba.jpg',
+          user_id: 6, album_id: 7)
+
+photo63 = Photo.create(caption: 'Furano In Spring',
+          img_url: 'https://res.cloudinary.com/explorewanderlust/image/upload/v1498200560/15348667538_c9c9a437fa_z_vvi5tp.jpg',
+          user_id: 6, album_id: 7)
+
+photo64 = Photo.create(caption: 'Docks In Okinawa',
+          img_url: 'https://res.cloudinary.com/explorewanderlust/image/upload/v1498200560/11103789573_02f7d51212_z_kwzzj7.jpg',
+          user_id: 6, album_id: 7)
+
+photo65 = Photo.create(caption: 'Nightime Cherry Blossoms In Tokyo',
+          img_url: 'https://res.cloudinary.com/explorewanderlust/image/upload/v1498200559/3417949907_57ebd4b630_z_kr8iwg.jpg',
+          user_id: 6, album_id: 7)
+
+photo66 = Photo.create(caption: 'Aerial Shot In Okinawa',
+          img_url: 'https://res.cloudinary.com/explorewanderlust/image/upload/v1498200559/2871780225_24e811e616_z_mfa5af.jpg',
+          user_id: 6, album_id: 7)
+
 Comment.destroy_all
 
-comment1 = Comment.create(user_id: 2, photo_id: 1, body: "Great shot!")
-comment2 = Comment.create(user_id: 3, photo_id: 1, body: "Beautiful!")
-comment3 = Comment.create(user_id: 4, photo_id: 1, body: "Where is this?")
-comment4 = Comment.create(user_id: 1, photo_id: 17, body: "<3 <3 <3")
-comment5 = Comment.create(user_id: 2, photo_id: 6, body: "Well done.")
-comment6 = Comment.create(user_id: 5, photo_id: 17, body: "I wanna go here!")
-comment7 = Comment.create(user_id: 3, photo_id: 40, body: "Amazing!")
-comment8 = Comment.create(user_id: 1, photo_id: 33, body: "What camera do you use?")
-comment9 = Comment.create(user_id: 4, photo_id: 25, body: "Phenomenal!")
-comment10 = Comment.create(user_id: 2, photo_id: 13, body: "Very nice!")
-comment11 = Comment.create(user_id: 2, photo_id: 17, body: "Great shot!")
-comment12 = Comment.create(user_id: 2, photo_id: 17, body: "Great shot!")
+#photo1
+Comment.create(user_id: user2.id, photo_id: photo1.id, body: "Great shot!")
+Comment.create(user_id: user3.id, photo_id: photo1.id, body: "Beautiful!")
+Comment.create(user_id: user4.id, photo_id: photo1.id, body: "Where is this?")
+
+#photo2
+Comment.create(user_id: user9.id, photo_id: photo2.id, body: "I love Hong Kong!")
+Comment.create(user_id: user7.id, photo_id: photo2.id, body: "The city looks beautiful at dusk.")
+
+#photo3
+Comment.create(user_id: user2.id, photo_id: photo3.id, body: "Wow, what a view!")
+Comment.create(user_id: user4.id, photo_id: photo3.id, body: "美丽的景色")
+
+#photo4
+Comment.create(user_id: user6.id, photo_id: photo4.id, body: "Shanghai is a fun city!")
+Comment.create(user_id: user8.id, photo_id: photo4.id, body: "Agreed!")
+Comment.create(user_id: user2.id, photo_id: photo4.id, body: "The bundddd")
+
+#photo5
+Comment.create(user_id: user8.id, photo_id: photo5.id, body: "美丽的景色")
+Comment.create(user_id: user4.id, photo_id: photo5.id, body: "Que lindo, quiero ir pronto!")
+
+#photo6
+Comment.create(user_id: user2.id, photo_id: photo6.id, body: "Well done.")
+Comment.create(user_id: user8.id, photo_id: photo6.id, body: "Looks like an interesting place!")
+
+#photo7
+Comment.create(user_id: user2.id, photo_id: photo7.id, body: "Very nice!")
+Comment.create(user_id: user5.id, photo_id: photo7.id, body: "Haha oh tourists...")
+
+#photo8
+Comment.create(user_id: user2.id, photo_id: photo8.id, body: "Very nice!")
+Comment.create(user_id: user3.id, photo_id: photo8.id, body: "Looks mad peaceful...")
+
+#photo9
+Comment.create(user_id: user8.id, photo_id: photo9.id, body: "Pretty!")
+Comment.create(user_id: user9.id, photo_id: photo9.id, body: "Looks relaxing :)")
+
+#photo10
+Comment.create(user_id: user4.id, photo_id: photo10.id, body: "Wow... impressive city")
+Comment.create(user_id: user9.id, photo_id: photo10.id, body: "Bright and lively!")
+Comment.create(user_id: user2.id, photo_id: photo10.id, body: "Amazing view!")
+
+#photo11
+Comment.create(user_id: user4.id, photo_id: photo11.id, body: "Haha this is great!")
+Comment.create(user_id: user8.id, photo_id: photo11.id, body: "Always wanted to go there!")
+Comment.create(user_id: user9.id, photo_id: photo11.id, body: ":P")
+
+#photo12
+Comment.create(user_id: user9.id, photo_id: photo12.id, body: "Interesting architecture...")
+Comment.create(user_id: user3.id, photo_id: photo12.id, body: "Pretty cool!")
+
+#photo13
+Comment.create(user_id: user2.id, photo_id: photo13.id, body: "Very nice!")
+
+#photo14
+Comment.create(user_id: user6.id, photo_id: photo14.id, body: "Is this still active?")
+Comment.create(user_id: user4.id, photo_id: photo14.id, body: "Living life on the edge!")
+
+#photo15
+Comment.create(user_id: user3.id, photo_id: photo15.id, body: "Was this a difficult hike?")
+Comment.create(user_id: user8.id, photo_id: photo15.id, body: "Wow!!!!! <3")
+
+#photo16
+Comment.create(user_id: user6.id, photo_id: photo16.id, body: "So green!")
+
+#photo17
+Comment.create(user_id: user8.id, photo_id: photo17.id, body: "<3 <3 <3")
+Comment.create(user_id: user5.id, photo_id: photo17.id, body: "I wanna go here!")
+Comment.create(user_id: user2.id, photo_id: photo17.id, body: "Great shot!")
+Comment.create(user_id: user2.id, photo_id: photo17.id, body: "Great shot!")
+
+#photo18
+Comment.create(user_id: user3.id, photo_id: photo18.id, body: "Looks stormy...")
+Comment.create(user_id: user9.id, photo_id: photo18.id, body: "Tanah Lot is unreal!")
+
+#photo19
+Comment.create(user_id: user7.id, photo_id: photo19.id, body: "Magnificent sunset, well done")
+Comment.create(user_id: user8.id, photo_id: photo19.id, body: "Those colors are amazing")
+
+#photo20
+Comment.create(user_id: user7.id, photo_id: photo20.id, body: "The water must be freezing!")
+Comment.create(user_id: user3.id, photo_id: photo20.id, body: "So smooth")
+
+#photo21
+Comment.create(user_id: user4.id, photo_id: photo21.id, body: "Wow...looks very calm")
+
+#photo22
+Comment.create(user_id: user4.id, photo_id: photo22.id, body: "Is that moss?")
+Comment.create(user_id: user7.id, photo_id: photo22.id, body: "Iceland's landscapes seem amazing")
+
+#photo23
+Comment.create(user_id: user5.id, photo_id: photo23.id, body: "I wonder what kind of rock that is?")
+Comment.create(user_id: user8.id, photo_id: photo23.id, body: "Interesting perspective")
+
+#photo24
+Comment.create(user_id: user9.id, photo_id: photo24.id, body: "Must have been raining a lot lately!")
+
+#photo25
+Comment.create(user_id: user4.id, photo_id: photo25.id, body: "Phenomenal!")
+
+#photo26
+Comment.create(user_id: user5.id, photo_id: photo26.id, body: "Looks chilly!")
+Comment.create(user_id: user7.id, photo_id: photo26.id, body: "What's the mountain called?")
+
+#photo27
+Comment.create(user_id: user2.id, photo_id: photo27.id, body: "The water is so clear!")
+Comment.create(user_id: user4.id, photo_id: photo27.id, body: "Yea, I'd definitely go there")
+Comment.create(user_id: user8.id, photo_id: photo27.id, body: "So placid and pristine!")
+
+#photo28
+Comment.create(user_id: user9.id, photo_id: photo28.id, body: "Wow!")
+Comment.create(user_id: user7.id, photo_id: photo28.id, body: "Great shot!")
+
+#photo29
+Comment.create(user_id: user4.id, photo_id: photo29.id, body: "I loved Rio!")
+Comment.create(user_id: user8.id, photo_id: photo29.id, body: "Must've been a hard hike!")
+
+#photo30
+Comment.create(user_id: user3.id, photo_id: photo30.id, body: "One of my favorite beaches!")
+Comment.create(user_id: user4.id, photo_id: photo30.id, body: "What a nice little secluded spot.")
+Comment.create(user_id: user8.id, photo_id: photo30.id, body: "<3")
+
+#photo31
+Comment.create(user_id: user6.id, photo_id: photo31.id, body: "Is that you diving?!")
+Comment.create(user_id: user4.id, photo_id: photo31.id, body: "Dois Irmãos :)")
+
+#photo32
+Comment.create(user_id: user9.id, photo_id: photo32.id, body: "What a sunset!")
+Comment.create(user_id: user4.id, photo_id: photo32.id, body: "Nice contrast.")
+
+#photo33
+Comment.create(user_id: user6.id, photo_id: photo33.id, body: "What camera do you use?")
+Comment.create(user_id: user8.id, photo_id: photo33.id, body: "Looks like a cute little village!")
+
+#photo34
+Comment.create(user_id: user3.id, photo_id: photo34.id, body: "Is that where you stayed?")
+Comment.create(user_id: user6.id, photo_id: photo34.id, body: "The Amazon must be amazing!")
+
+#photo35
+Comment.create(user_id: user4.id, photo_id: photo35.id, body: "Wow that reflection is crazy!")
+Comment.create(user_id: user7.id, photo_id: photo35.id, body: "Are you on a boat tour?")
+Comment.create(user_id: user8.id, photo_id: photo35.id, body: "What a trip!")
+
+#photo36
+Comment.create(user_id: user9.id, photo_id: photo36.id, body: "Wow, what an amazing view!")
+Comment.create(user_id: user4.id, photo_id: photo36.id, body: "I wish I had gone at night too!")
+
+#photo37
+Comment.create(user_id: user7.id, photo_id: photo37.id, body: "Nice shot!")
+
+#photo38
+Comment.create(user_id: user2.id, photo_id: photo38.id, body: "I've always wanted to go to Germany!")
+Comment.create(user_id: user9.id, photo_id: photo38.id, body: "Wow, that architecture is amazing.")
+
+#photo39
+Comment.create(user_id: user5.id, photo_id: photo39.id, body: "Looks like a cute area!")
+
+#photo40
+Comment.create(user_id: user3.id, photo_id: photo40.id, body: "Amazing!")
+Comment.create(user_id: user8.id, photo_id: photo40.id, body: "Reminds me of a movie!")
+
+#photo41
+Comment.create(user_id: user5.id, photo_id: photo41.id, body: "I've heard the Rhineland is beautiful")
+Comment.create(user_id: user8.id, photo_id: photo41.id, body: "I would love to visit here!")
+
+#photo42
+Comment.create(user_id: user7.id, photo_id: photo42.id, body: "Love those autumn colors!")
+Comment.create(user_id: user9.id, photo_id: photo42.id, body: "Loving the reflection of the sky.")
+
+#photo43
+Comment.create(user_id: user6.id, photo_id: photo43.id, body: "What funky houses!")
+Comment.create(user_id: user4.id, photo_id: photo43.id, body: "Who's the architect who designed these?")
+Comment.create(user_id: user7.id, photo_id: photo43.id, body: "One of my favorite sites!")
+
+#photo44
+Comment.create(user_id: user2.id, photo_id: photo44.id, body: "Wow... like the Sound of Music.")
+Comment.create(user_id: user9.id, photo_id: photo44.id, body: "Loving that scenery!")
+
+#photo45
+Comment.create(user_id: user2.id, photo_id: photo45.id, body: "What a beautiful castle!")
+Comment.create(user_id: user3.id, photo_id: photo45.id, body: "Looks like a fairy tale!")
+Comment.create(user_id: user8.id, photo_id: photo45.id, body: "My favorite place in Germany!")
+Comment.create(user_id: user9.id, photo_id: photo45.id, body: "So amazing <3")
+
+#photo46
+Comment.create(user_id: user9.id, photo_id: photo46.id, body: "I wonder what those crops are?")
+
+#photo47
+Comment.create(user_id: user1.id, photo_id: photo47.id, body: "Terrible boat ride, eh? ;)")
+Comment.create(user_id: user3.id, photo_id: photo47.id, body: "That's near my brother's house!")
+
+#photo48
+Comment.create(user_id: user9.id, photo_id: photo48.id, body: "Mother Nature is AWESOME")
+Comment.create(user_id: user4.id, photo_id: photo48.id, body: "My next vacation, for sure :)")
+
+#photo49
+Comment.create(user_id: user1.id, photo_id: photo49.id, body: "Nice rainbow shot!")
+Comment.create(user_id: user5.id, photo_id: photo49.id, body: "Would love to be on that tour boat!")
+
+#photo50
+Comment.create(user_id: user6.id, photo_id: photo50.id, body: "Cute ponchos haha")
+
+#photo51
+Comment.create(user_id: user9.id, photo_id: photo51.id, body: "Truly amazing...")
+Comment.create(user_id: user1.id, photo_id: photo51.id, body: "I'd frame this one!")
+Comment.create(user_id: user4.id, photo_id: photo51.id, body: "I'm packing my bags!")
+
+#photo52
+Comment.create(user_id: user3.id, photo_id: photo52.id, body: "Love fireworks :)")
+Comment.create(user_id: user7.id, photo_id: photo52.id, body: "I recognize that skyline~")
+
+#photo53
+Comment.create(user_id: user1.id, photo_id: photo53.id, body: "This gives me chills...")
+Comment.create(user_id: user4.id, photo_id: photo53.id, body: "Seeing the northern lights tops my wish list!")
+Comment.create(user_id: user8.id, photo_id: photo53.id, body: "So beautiful.")
+Comment.create(user_id: user6.id, photo_id: photo53.id, body: "Wow...")
+Comment.create(user_id: user3.id, photo_id: photo53.id, body: "<3")
+
+#photo54
+Comment.create(user_id: user9.id, photo_id: photo54.id, body: "Summers in Canada <3")
+
+#photo55
+Comment.create(user_id: user1.id, photo_id: photo55.id, body: "Looks like a great camping spot!")
+Comment.create(user_id: user4.id, photo_id: photo55.id, body: "Ahh... the great outdoors :)")
+Comment.create(user_id: user6.id, photo_id: photo55.id, body: "Yes please!")
+
+#photo56
+Comment.create(user_id: user5.id, photo_id: photo56.id, body: "Beautiful sculpture!")
+
+#photo57
+Comment.create(user_id: user1.id, photo_id: photo57.id, body: "Wow! Looks amazing.")
+Comment.create(user_id: user4.id, photo_id: photo57.id, body: "I went there last year!")
+Comment.create(user_id: user9.id, photo_id: photo57.id, body: "Zen <3")
+
+#photo58
+Comment.create(user_id: user2.id, photo_id: photo58.id, body: "Looks like they're having fun!")
+Comment.create(user_id: user8.id, photo_id: photo58.id, body: "Which temple is this?")
+
+#photo59
+Comment.create(user_id: user5.id, photo_id: photo59.id, body: "Love that fall foliage.")
+Comment.create(user_id: user3.id, photo_id: photo59.id, body: "Seems crisp :)")
+
+#photo60
+Comment.create(user_id: user9.id, photo_id: photo60.id, body: "Looks like such a clean city!")
+Comment.create(user_id: user4.id, photo_id: photo60.id, body: "Must be cold!")
+Comment.create(user_id: user5.id, photo_id: photo60.id, body: "Japan gets snow?!")
+
+#photo61
+Comment.create(user_id: user1.id, photo_id: photo61.id, body: "Love the colors!")
+Comment.create(user_id: user2.id, photo_id: photo61.id, body: "Cherry blossoms are so beautiful.")
+Comment.create(user_id: user9.id, photo_id: photo61.id, body: "WOW!!!")
+
+#photo62
+Comment.create(user_id: user1.id, photo_id: photo62.id, body: "Wow that mountain is massive!")
+Comment.create(user_id: user6.id, photo_id: photo62.id, body: "Imagine hiking that...")
+Comment.create(user_id: user8.id, photo_id: photo62.id, body: "Do you know the peak height?")
+Comment.create(user_id: user7.id, photo_id: photo62.id, body: "Really makes you wonder...")
+
+#photo63
+Comment.create(user_id: user2.id, photo_id: photo63.id, body: "So beautiful!")
+Comment.create(user_id: user8.id, photo_id: photo63.id, body: "And so many flowers!")
+
+#photo64
+Comment.create(user_id: user6.id, photo_id: photo64.id, body: "Looks gorgeous!")
+Comment.create(user_id: user6.id, photo_id: photo64.id, body: "Catching some rays, yea?")
+
+#photo65
+Comment.create(user_id: user1.id, photo_id: photo65.id, body: "Wow... so peaceful.")
+Comment.create(user_id: user4.id, photo_id: photo65.id, body: "What river is this?")
+
+#photo66
+Comment.create(user_id: user1.id, photo_id: photo66.id, body: "Take me there!")
+Comment.create(user_id: user2.id, photo_id: photo66.id, body: "Reminds me of somewhere...")
+Comment.create(user_id: user4.id, photo_id: photo66.id, body: "I would totally live on that island!")
+
 
 Tag.destroy_all
 
@@ -600,3 +911,64 @@ PhotoTag.create(photo_id: photo54.id, tag_id: tag13.id)
 
 PhotoTag.create(photo_id: photo55.id, tag_id: tag8.id)
 PhotoTag.create(photo_id: photo55.id, tag_id: tag13.id)
+
+#Photo56
+
+PhotoTag.create(photo_id: photo56.id, tag_id: tag8.id)
+
+#Photo57
+
+PhotoTag.create(photo_id: photo57.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo57.id, tag_id: tag8.id)
+PhotoTag.create(photo_id: photo57.id, tag_id: tag13.id)
+
+#photo58
+
+PhotoTag.create(photo_id: photo58.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo58.id, tag_id: tag8.id)
+
+#Photo59
+
+PhotoTag.create(photo_id: photo59.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo59.id, tag_id: tag12.id)
+
+#Photo60
+
+PhotoTag.create(photo_id: photo60.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo60.id, tag_id: tag4.id)
+PhotoTag.create(photo_id: photo60.id, tag_id: tag7.id)
+
+#Photo61
+
+PhotoTag.create(photo_id: photo61.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo61.id, tag_id: tag11.id)
+PhotoTag.create(photo_id: photo61.id, tag_id: tag13.id)
+
+#Photo62
+
+PhotoTag.create(photo_id: photo62.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo62.id, tag_id: tag7.id)
+
+#Photo63
+
+PhotoTag.create(photo_id: photo63.id, tag_id: tag3.id)
+PhotoTag.create(photo_id: photo63.id, tag_id: tag11.id)
+
+#Photo64
+
+PhotoTag.create(photo_id: photo64.id, tag_id: tag1.id)
+PhotoTag.create(photo_id: photo64.id, tag_id: tag6.id)
+PhotoTag.create(photo_id: photo64.id, tag_id: tag8.id)
+
+#Photo65
+
+PhotoTag.create(photo_id: photo65.id, tag_id: tag2.id)
+PhotoTag.create(photo_id: photo65.id, tag_id: tag5.id)
+PhotoTag.create(photo_id: photo65.id, tag_id: tag11.id)
+PhotoTag.create(photo_id: photo65.id, tag_id: tag13.id)
+
+#Photo66
+
+PhotoTag.create(photo_id: photo66.id, tag_id: tag1.id)
+PhotoTag.create(photo_id: photo66.id, tag_id: tag6.id)
+PhotoTag.create(photo_id: photo66.id, tag_id: tag8.id)
