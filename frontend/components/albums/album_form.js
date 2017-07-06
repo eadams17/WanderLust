@@ -68,14 +68,15 @@ class AlbumForm extends React.Component {
 
         <br/>
 
-        <button className="submit-button">Create Album</button>
+        <button className="album-submit-button">Create Album</button>
+        <br/>
+        { this.renderErrors() }
       </div>
     );
 
     return (
       <div className="album-form-page">
         <form onSubmit={this.handleSubmit} className="album-form-box">
-          { this.renderErrors() }
           { albumUploadForm }
         </form>
       </div>
