@@ -174,14 +174,15 @@ class PhotoUpload extends React.Component {
 
         <br/>
 
-        {this.renderButtons()}
+        { this.renderButtons() }
+        <br/>
+        { this.renderErrors() }
       </div>
     );
 
     return (
       <div className="photo-upload-page">
         <form onSubmit={this.handleSubmit} className="upload-form-box">
-          { this.renderErrors() }
           { photoUploadForm }
         </form>
       </div>
